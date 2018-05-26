@@ -1,0 +1,14 @@
+.c-sub-title {
+  font-family: 'ethos_regular_italic', $font-fallback;
+  font-size: $sixteenpx;
+  color: $color-grey-dark;
+  margin-bottom: 0;
+  letter-spacing: 0.04em;
+}
+
+@media (min-width: $screen-sm-min) {
+
+  .c-sub-title {
+    font-size: $sixteenpx;
+  }
+}

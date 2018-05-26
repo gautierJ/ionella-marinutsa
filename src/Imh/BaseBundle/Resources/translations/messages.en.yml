@@ -1,0 +1,139 @@
+imh:
+  base:
+    menu:
+      label_locale: 'Language'
+      label_menu:   'Menu'
+      home:         'Home'
+      biography:    'Biography'
+      repertoire:   'Repertoire'
+      gallery:      'Gallery'
+      video:        'Videos'
+      contact:      'Contact'
+
+    menu_lang:
+      0:
+        text:       'French'
+        locale:     'fr'
+        t_locale:   'fr'
+        title:      'French traduction'
+      1:
+        text:       'English'
+        locale:     'en'
+        t_locale:   'en'
+        title:      'English traduction'
+      2:
+        text:       'Russian'
+        locale:     'ru'
+        t_locale:   'ru'
+        title:      'Russian traduction'
+
+    home:
+      page_title:   'Home | Ionella Marinutsa'
+      website:      'Official website'
+      menu:
+        section1:   'Ionella'
+        section2:   'Concert'
+        section3:   'Events'
+      events:
+        title:      'upcoming events'
+        sub_title:  'Find the schedule of my concerts at a glance...'
+
+    biography:
+      page_title:   'Biography | Ionella Marinutsa'
+      main_section-title: 'Biography'
+      main_text-section1: >
+        <p class="first">Born in St.-Petersburg in 1992, Ionella Marinutsa is a Paris-based professional harpist, regularly performing in Europe and in her home country Russia.</p>
+        <p>She has collaborated as a soloist with several orchestras such as symphony orchestra of the Sorbonne University, philharmonic orchestras of Samara, Yekaterinburg, Volgograd, Togliatti etc. As an orchestral musician, Ionella often plays with the “Orchestre Philharmonique de Radio France”.</p>
+
+      main_text-section2: >
+        <p>Ionella has been a major prizewinner in international harp competitions, including First Prize of the 89<sup>th</sup> International Leopold Bellan Competition (Paris), The Special Jury Prize of the Second International Harp Competition (Hungary), Laureate of the First Prize “Symphony” Competition (Russia).</p>
+        <p>In January 2017 she created a project of acoustic research of harp sounds in partnership with the Institute for Research and Coordination in Acoustics/Music (IRCAM), ATIAM course. The Institute is linked with the Centre Georges Pompidou in Paris.</p>
+        <p>The harpist regularly gives recitals at the Salle Cortot in Paris. As a guest soloist she was performing at the Debussy Festival in 2017 and at the International Music Festival of Alba (Italy), her performances were a great success among audience and press.</p>
+        <p>Moreover, since 2015 Ionella is a soloist for the French association “Jeunes talents” (Young talents), as well as a soloist for the association “Saint-Petersburg Music House of Saint-Petersburg” since 2010.</p>
+
+      main_text-section3: >
+        <p>Being a graduate of the Ecole Normale Paris A. Cortot in class of Isabelle Perrin, today, Ionella continuing her studies at the Pôle Supérieur de Paris PSPBB in the class of G. Petit-Volta. In the beginning of 2018, Ionella was admitted to a Master's programme at the National Conservatory of Music and Dance of Paris in Isabelle Moretti's class (Conservatoire National Supérieur de Musique et de Danse de Paris CNSMDP).</p>
+        <p>Since 2018 Ionella Marinutsa is supported by SAFRAN Foundation in Paris.</p>
+
+      prizes:
+        title:      'Prizes - International Competitions'
+        list: >
+          <li>2015 – <strong>1<sup>st</sup> Prize</strong> in the 89<sup>th</sup> Léopold Bellan International Music Competition (Paris).</li>
+          <li>2012 – <strong>5<sup>th</sup> Prize</strong> in the «Crystal Key» International Harp Competition (Saint-Petersburg).</li>
+          <li>2010 – <strong>Special Prize</strong> for the best interpretation of Hungarian music in the 2<sup>nd</sup> International Harpist Competition in Hungary (Szeged).</li>
+          <li>2010 – <strong>1<sup>st</sup> Prize</strong> in the 7<sup>th</sup> International «Symphony» Competition for Young Musicians (Volgograd).</li>
+          <li>2005 – <strong>3<sup>rd</sup> Prize</strong> in the Open Competition for Young Violinists, Cellists and Harpists (Saint-Petersburg).</li>
+          <li>2003 – <strong>2<sup>nd</sup> Prize</strong> in the Metropolitan Competition for Young Harpists (Saint-Petersburg).</li>
+
+      download:     'Download the biography (.pdf)'
+
+    repertoire:
+      page_title:     'Repertoire | Ionella Marinutsa'
+      main_section-title: 'Répertoire'
+      concert:
+        duration:     'Duration : '
+        0:
+          composer:   'Georg Friedrich HAENDEL'
+          life:       '(1685-1759)'
+          name:       'haendel'
+          work:       'HARP CONCERTO, B-DUR, OP. 4, NO. 6 HWV 294'
+          duration:   'around 14 minutes'
+          arrangement: 'With string orchestra'
+        1:
+          composer:   'Claude DEBUSSY'
+          life:       '(1862-1918)'
+          name:       'debussy'
+          work:       'SACRED AND PROFANE DANSES'
+          duration:   'around 10 minutes'
+          arrangement: 'With string orchestra'
+        2:
+          composer:   'Reinhold GLIERE'
+          life:       '(1874-1956)'
+          name:       'gliere'
+          work:       'HARP CONCERTO, OP. 34'
+          duration:   'around 25 minutes'
+          arrangement: 'With symphony orchestra'
+        3:
+          composer:   'Maurice RAVEL'
+          life:       '(1875-1937)'
+          name:       'ravel'
+          work:       'INTRODUCTION AND ALLEGRO'
+          duration:   'around 12 minutes'
+          arrangement: 'With string quartet, flute and clarinet'
+      recital:
+        title:        'Recitals'
+
+    contact:
+      page_title:         'Contact | Ionella Marinutsa'
+      main_section-title: 'Contact'
+      answer:             'Leave a message !'
+      lastname:           'Last Name * :'
+      firstname:          'First Name * :'
+      email:              'Email * :'
+      subject:            'Subject * :'
+      message:            'Message * :'
+      send:               'Send'
+      mandatory:          'Mandatory fields'
+
+    footer:
+      site:         'Ionella-marinutsa.com'
+      language:     'Languages'
+      schools:
+        title:      'Schools'
+        enmp:
+          text:     'National School of Music of Paris'
+          title:    'Website of the National School of Music of Paris'
+        crsr:
+          text:     'Russian Conservatory Sergueï Rachmaninov'
+          title:    'Website of the Russian Conservatory Sergueï Rachmaninov'
+      follow:
+        title:      'Follow me'
+        fb:         'Facebook'
+        tw:         'Twitter'
+        g+:         'Google +'
+        ig:         'Instagram'
+      engine:
+        title:      'Powered by'
+        framework:  'Symfony Framework'
+      copyright: >
+        Ionella Marinutsa.<br> All rights reserved.

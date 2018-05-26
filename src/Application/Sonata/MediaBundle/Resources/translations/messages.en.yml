@@ -1,0 +1,20 @@
+sonata:
+  media:
+    gallery:
+      page_title: 'Gallery | Ionella Marinutsa'
+      menu:
+        title_1:  'Menu'
+        title_2:  'Gallery'
+        title_3:  'Share'
+    video:
+      page_title: 'Videos | Ionella Marinutsa'
+      display:    'Display'
+      like:       'Like'
+      download:   'Download'
+      total_views: >
+        Total number <br> of views
+      share: >
+        Share <br> the video :
+      views:      'Views'
+
+

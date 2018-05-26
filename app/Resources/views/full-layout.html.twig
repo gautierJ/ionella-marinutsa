@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://ogp.me/ns/fb#" lang="{{ app.request.locale }}">
+    <head>
+	    <meta name="google-site-verification" content="DyjxY61nVz2XJcFkNef-caFR5ONIJMVPf4oocyZ2CYM">
+        <meta charset="utf-8" />
+        <meta name="description" content="Official site with biography, prizes, repertoire, galleries, and videos.">
+        <meta name="keywords" content="ionella marinutsa, harp, harpist, classical music, concert, classical concert, harp concert, conservatory, conservatory serge rachmaninoff, national school of music of paris">
+        <meta http-equiv="content-language" content="fr,en,ru">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+        {% block facebookOpenGraphTags '' %}
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('/favicon.ico') }}" />
+
+        <title>{% block title %}{{ ('imh.base.home.page_title')|trans }}{% endblock %}</title>
+
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!--[if gte IE 9]>
+        <style type="text/css">
+            .gradient { filter: none; }
+        </style>
+        <![endif]-->
+
+        <!--Third party plugins-->
+        <link rel="stylesheet" href="{{ asset('bundles/imhbase/bower_components/fullpage.js/dist/jquery.fullpage.css') }}" type="text/css">
+
+        {% block stylesheets '' %}
+    </head>
+
+    <body data-body>
+        {% block facebookSDK '' %}
+        {% block flashes '' %}
+        {% include 'ImhBaseBundle:Part:svg.html.twig' %}
+        {% block loader '' %}
+
+        <div class="container-fluid imh-container-fluid">
+
+            {% block header %}
+                <header class="imh-header">
+                    {% include 'ImhBaseBundle:Menu:navigation.html.twig' %}
+                </header>
+            {% endblock %}
+
+            <section class="imh-content" role="main" data-content>
+                {% block main '' %}
+            </section>
+
+            {#{% block sidebar '' %}#}
+
+            {% block footer %}
+                {% include 'ImhBaseBundle:Part:footer.html.twig' %}
+            {% endblock %}
+        </div>
+
+        {% if isTouchDevice %}
+            {% include 'ImhBaseBundle:Components:device-rotation-change.html.twig' %}
+        {% endif %}
+
+        {% block javascripts %}
+
+            <!-- Google Analytics -->
+            <script>
+                window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+                ga('create', 'UA-64577170-1', 'auto');
+                ga('send', 'pageview');
+            </script>
+            <script async src='https://www.google-analytics.com/analytics.js'></script>
+            <!-- End Google Analytics -->
+
+            <script>
+                // Picture element HTML5 shiv
+                document.createElement('picture');
+            </script>
+
+            {% javascripts output='assets/compiled/js/main.js'
+            '@ImhBaseBundle/Resources/public/bower_components/jquery/dist/jquery.min.js'
+            '@ImhBaseBundle/Resources/public/bower_components/jquery.easing/js/jquery.easing.min.js'
+            '@ImhBaseBundle/Resources/public/bower_components/jquery-mousewheel/jquery.mousewheel.min.js'
+            '@ImhBaseBundle/Resources/public/bower_components/jquery.lazyload/jquery.lazyload.js'
+            '@ImhBaseBundle/Resources/public/bower_components/fullpage.js/dist/jquery.fullpage.js'
+            '@ImhBaseBundle/Resources/public/bower_components/picturefill/dist/picturefill.js'
+            'assets/lib/modernizr/modernizr-custom.js'
+            'assets/lib/porthole/porthole.js'
+            'assets/lib/porthole/porthole.init.js'
+            '@ImhBaseBundle/Resources/assets/js/jquery.fontspy.js'
+            '@ImhBaseBundle/Resources/assets/js/jquery.imh.menumobile.js'
+            '@ImhBaseBundle/Resources/assets/js/ajax.js'
+            %}
+
+            <script src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+
+            {#FOSJsRoutingBundle#}
+            <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+            <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
+
+            <script>
+                $(function () {
+                    'use strict';
+                    if (Modernizr.touchevents) $('[data-top-navigation]').menumobile();
+                    $(document).trigger('enhance');
+                });
+            </script>
+        {% endblock %}
+    </body>
+</html>

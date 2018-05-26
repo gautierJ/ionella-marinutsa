@@ -1,0 +1,20 @@
+sonata:
+  media:
+    gallery:
+      page_title: 'галерея | Ионелла Маринуца'
+      menu:
+        title_1:  'меню'
+        title_2:  'галерея'
+        title_3:  'доля'
+    video:
+      page_title: 'видео | Ионелла Маринуца'
+      display:    'Просмотр'
+      like:       'мне нравится'
+      download:   'скачать'
+      total_views: >
+        Всего <br> Просмотров
+      share: >
+        доля <br> видео
+      views:      'взгляды'
+
+
