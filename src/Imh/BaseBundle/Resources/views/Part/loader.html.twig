@@ -19,12 +19,7 @@
             </div>
 
             {% block intro %}
-                <div class="imh-intro">
-                    <hgroup class="imh-intro-heading-group">
-                        <h1 class="imh-intro-title helper-size-large">Ionella<strong class="imh-title-strong"> Marinutsa</strong></h1>
-                        <h4 class="imh-intro-subtitle helper-size-medium">{{ ('imh.base.home.website')|trans }}</h4>
-                    </hgroup>
-                </div>
+                {% include 'ImhBaseBundle:Components:intro-header.html.twig' %}
                 {% include 'ImhBaseBundle:Components:mouse.html.twig' %}
             {% endblock %}
         </div>

@@ -102,7 +102,7 @@
 }
 
 .imh-footer__head {
-  font-family: 'ralewaysemibold', $font-fallback;
+  font-family: 'ralewaysemibold', sans-serif;
   font-weight: normal;
   margin: 5px 0 15px;
   font-size: $thirteenpx;
@@ -182,7 +182,7 @@
 }
 
 .imh-footer__rights {
-  font-family: 'ralewayregular', $font-fallback;
+  font-family: 'ralewayregular', sans-serif;
   display: block;
   font-size: $tenpx;
   margin: 20px 0 15px;

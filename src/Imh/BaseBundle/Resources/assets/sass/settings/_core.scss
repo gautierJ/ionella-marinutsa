@@ -1,0 +1,79 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+$text-font-stack-default: 'Georgia', 'Times New Roman', 'Times', serif !default;
+$text-font-stack-defered: 'ethos_regular', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+// Base typographical styles and baseline grid.
+// 1rem = 10px by default
+
+$base-font-size:            1.2rem;
+$base-line-height:          2rem;
+$base-line-height-unitless: $base-line-height / $base-font-size;
+
+// Spacing values are determined based on your project's global line height (i.e
+// your baseline grid). It is not recommended that you modify these following
+// variables (it can break your vertical rhythm), but if you need to, you can.
+
+$base-spacing-unit: $base-line-height;
+
+$gutter-horizontal: 2rem;
+$gutter-horizontal-sm: 1.5rem;
+$gutter-vertical: 2rem;
+$gutter-vertical-sm: 3rem;
+$gutter-internal: 1.5rem;
+
+// Gutter map to use these values dynamically in mixins
+$gutter: (
+        horizontal: 2rem,
+        horizontal-sm: 1.5rem,
+        vertical: 2rem,
+        vertical-sm: 3rem,
+        internal: 1.5rem
+);
+
+// How many times larger/smaller than the default should our spacing unit
+// variants be?
+
+// Please don't use this in your styles !
+$base-spacing-unit-factor-x-small:       0.25    !default; // 0.5rem
+$base-spacing-unit-factor-small:         0.5     !default; // 1.0rem
+$base-spacing-unit-factor-medium:        1.5     !default; // 3.0rem
+$base-spacing-unit-factor-large:         2       !default; // 4.0rem
+$base-spacing-unit-factor-x-large:       4       !default; // 8.0rem
+
+$base-font-size-factor-xxx-small:        0.6875  !default; // 1.1rem
+$base-font-size-factor-xx-small:         0.750   !default; // 1.2rem
+$base-font-size-factor-x-small:          0.8125  !default; // 1.3rem
+$base-font-size-factor-small:            0.875   !default; // 1.4rem
+$base-font-size-factor-large:            1.125   !default; // 1.8rem
+$base-font-size-factor-x-large:          1.250   !default; // 2.0rem
+$base-font-size-factor-xx-large:         1.375   !default; // 2.2rem
+$base-font-size-factor-xxx-large:        1.5     !default; // 2.4rem
+
+// This can be used for the layout...
+$base-spacing-unit-x-small:              $base-spacing-unit * $base-spacing-unit-factor-x-small;
+$base-spacing-unit-small:                $base-spacing-unit * $base-spacing-unit-factor-small;
+$base-spacing-unit-medium:               $base-spacing-unit * $base-spacing-unit-factor-medium;
+$base-spacing-unit-large:                $base-spacing-unit * $base-spacing-unit-factor-large;
+$base-spacing-unit-x-large:              $base-spacing-unit * $base-spacing-unit-factor-x-large;
+
+
+
+
+$ninepx:                 0.750em;
+$tenpx:                  0.833em;
+$elevenpx:               0.917em;
+$basepx:                 1em;
+$thirteenpx:             1.083em;
+$fourteenpx:             1.167em;
+$fifteenpx:              1.250em;
+$sixteenpx:              1.333em;
+$eighteenpx:             1.500em;
+$twentypx:               1.667em;
+$twentytwopx:            1.833em;
+$twentyeightpx:          2.333em;
+$thirtypx:               2.500em;
+$fourtypx:               3.333em;
+$sixtyfourpx:            5.333em;

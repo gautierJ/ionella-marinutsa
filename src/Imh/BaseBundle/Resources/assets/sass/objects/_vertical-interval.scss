@@ -1,0 +1,132 @@
+/*
+ * -----------------------------------------------------------------------------
+ * Vertical interval
+ * /!\ Beware of margin collapsing ! @see http://csswizardry.com/2012/06/single-direction-margin-declarations/
+ * You should use @extend %margin-bottom when creating your component to ensure vertical rhythm
+ *
+ * -----------------------------------------------------------------------------
+*/
+
+@mixin vertical-interval($side:top, $size:"") {
+    @if $size == tiny {
+        margin-#{$side}: $base-spacing-unit-x-small;
+    } @else if $size == small {
+        margin-#{$side}: $base-spacing-unit-small;
+    } @else if $size == medium {
+        margin-#{$side}: $base-spacing-unit-medium;
+    } @else if $size == large {
+        margin-#{$side}: $base-spacing-unit-large;
+    } @else if $size == huge {
+        margin-#{$side}: $base-spacing-unit-x-large;
+    } @else {
+        margin-#{$side}: $base-spacing-unit;
+    }
+}
+
+@mixin generate-all-vertical-interval($breakpoint:"") {
+    .o-vertical-interval#{$breakpoint} {
+        @include vertical-interval(top);
+        @include vertical-interval(bottom);
+    }
+
+    .o-vertical-interval-x-small#{$breakpoint} {
+        @include vertical-interval(top, tiny);
+        @include vertical-interval(bottom, tiny);
+    }
+
+    .o-vertical-interval-small#{$breakpoint} {
+        @include vertical-interval(top, small);
+        @include vertical-interval(bottom, small);
+    }
+
+    .o-vertical-interval-medium#{$breakpoint} {
+        @include vertical-interval(top, medium);
+        @include vertical-interval(bottom, medium);
+    }
+
+    .o-vertical-interval-large#{$breakpoint} {
+        @include vertical-interval(top, large);
+        @include vertical-interval(bottom, large);
+    }
+
+    .o-vertical-interval-x-large#{$breakpoint} {
+        @include vertical-interval(top, huge);
+        @include vertical-interval(bottom, huge);
+    }
+
+
+    .o-vertical-interval-top#{$breakpoint} {
+        @include vertical-interval(top);
+    }
+
+    .o-vertical-interval-top-x-small#{$breakpoint} {
+        @include vertical-interval(top, tiny);
+    }
+
+    .o-vertical-interval-top-small#{$breakpoint} {
+        @include vertical-interval(top, small);
+    }
+
+    .o-vertical-interval-top-medium#{$breakpoint} {
+        @include vertical-interval(top, medium);
+    }
+
+    .o-vertical-interval-top-large#{$breakpoint} {
+        @include vertical-interval(top, large);
+    }
+
+    .o-vertical-interval-top-x-large#{$breakpoint} {
+        @include vertical-interval(top, huge);
+    }
+
+    .o-vertical-interval-bottom#{$breakpoint} {
+        @include vertical-interval(bottom);
+    }
+
+    .o-vertical-interval-bottom-x-small#{$breakpoint} {
+        @include vertical-interval(bottom, tiny);
+    }
+
+    .o-vertical-interval-bottom-small#{$breakpoint} {
+        @include vertical-interval(bottom, small);
+    }
+
+    .o-vertical-interval-bottom-medium#{$breakpoint} {
+        @include vertical-interval(bottom, medium);
+    }
+
+    .o-vertical-interval-bottom-large#{$breakpoint} {
+        @include vertical-interval(bottom, large);
+    }
+
+    .o-vertical-interval-bottom-x-large#{$breakpoint} {
+        @include vertical-interval(bottom, huge);
+    }
+}
+
+@include generate-all-vertical-interval();
+
+
+@media (min-width: $screen-sm-min) {
+    @include generate-all-vertical-interval("\\@sm");
+}
+
+@media (min-width: $screen-md-min) {
+    @include generate-all-vertical-interval("\\@md");
+}
+
+@media (min-width: $screen-lg-min) {
+    @include generate-all-vertical-interval("\\@lg");
+}
+
+@media (max-width: $screen-xs-max) {
+    @include generate-all-vertical-interval("\\@xs-max");
+}
+
+@media (max-width: $screen-sm-max) {
+    @include generate-all-vertical-interval("\\@sm-max");
+}
+
+@media (max-width: $screen-md-max) {
+    @include generate-all-vertical-interval("\\@md-max");
+}

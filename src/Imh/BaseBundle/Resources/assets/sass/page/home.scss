@@ -11,11 +11,6 @@ $fa-font-path: "/bundles/imhbase/bower_components/fontawesome/fonts";
     }
   }
 
-  .imh-intro {
-    @include opacity(1);
-    @include transition(opacity 1.5s linear .7s);
-  }
-
   .imh-opening-col:after {
     @include animation('stack-in-width 3s cubic-bezier(0,.92,.08,1) .7s forwards');
   }
@@ -45,11 +40,6 @@ $fa-font-path: "/bundles/imhbase/bower_components/fontawesome/fonts";
     height: 100%;
     background-color: #e2e2e2;
     @include animation('stack-out-height 2s cubic-bezier(0,.92,.08,1) 0s forwards');
-  }
-
-  .imh-intro {
-    @include animation('stack-opening .5s ease-in .3s forwards');
-    will-change: opacity;
   }
 
   .imh-opening-shutter {

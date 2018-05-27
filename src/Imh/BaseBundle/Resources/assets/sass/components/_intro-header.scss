@@ -1,0 +1,54 @@
+@include keyframes(stack-opening) {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 40%;
+  }
+}
+
+.c-intro-header {
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  background-color: $color-grey-ultralight;
+  width: 280px;
+  height: 110px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  text-align: center;
+  display: table;
+
+  .mA_1 & {
+    opacity: 1;
+    transition: opacity 1.5s linear 0.7s;
+  }
+
+  .mA_2 & {
+    animation: stack-opening 0.5s ease-in 0.3s forwards;
+    will-change: opacity;
+  }
+}
+
+.c-intro-header__inside {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.c-intro-header__firstname {
+  font-family: 'ralewaylight', sans-serif;
+  margin: 0;
+}
+
+.c-intro-header__lastname {
+  font-family: 'ralewayregular', sans-serif;
+  color: $color-grey-dark;
+  margin: 0;
+}
+
+.c-intro-header__sub-title {
+  font-family: 'ethos_regular_italic', serif;
+  color: $color-grey-dark;
+}

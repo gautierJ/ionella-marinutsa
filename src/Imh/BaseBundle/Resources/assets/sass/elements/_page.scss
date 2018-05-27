@@ -1,0 +1,53 @@
+/**
+ * Simple page-level setup.
+ *
+ * 1. Set the default `font-size` and `line-height` for the entire project,
+ *    sourced from our default variables. The `font-size` is calculated to exist
+ *    in ems, the `line-height` is calculated to exist unitlessly. Use the 62.5% trick
+ *    to set 1rem to 10px by default
+ *
+ *    a. fallback IE8+
+ *    b. IE9-IE11 math fixing. See http://bit.ly/1g4X0bX
+ *
+ * 2. Prevent FOIT (Flash of Invisble Text) on our custom webfont
+ *    @see https://www.zachleat.com/web/comprehensive-webfonts/#fout-class
+ *
+ * 3. Force scrollbars to always be visible to prevent awkward 'jumps' when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ *
+ * 4. Ensure the page always fills at least the entire height of the viewport.
+ *
+ * 5. Changes the default tap highlight to be completely transparent in iOS.
+ *
+ * 6. Prevent viewport horizontal overflowing
+ */
+
+* {
+    @include backface-visibility(hidden);
+}
+
+html {
+    font-size: .625em; /* [1.a] */
+    font-size: calc(1em * .625); /* [1.b] */
+    font-family: $text-font-stack-default; /* [2] */
+    &.has-fonts-loaded {
+        font-family: $text-font-stack-defered; /* [2] */
+    }
+    //overflow-y: scroll; /* [3] */
+    height: 100%; /* [4] */
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* [5] */
+    -webkit-font-smoothing: antialiased;
+    word-wrap: break-word;
+    //overflow-x: hidden; /* [6] */
+}
+
+body {
+    color: $color-grey-darker;
+    font-size: $base-font-size; /* [1] */
+    line-height: $base-line-height-unitless; /* [1] */
+    height: 100%;
+
+    font-family: inherit;
+}
+

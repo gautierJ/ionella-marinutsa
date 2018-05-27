@@ -8,33 +8,57 @@
 $grid-columns: 24;
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
 
+
 $hamburger-layer-color: white;
 @import "css-hamburgers/_sass/hamburgers/hamburgers";
 
 
-// Core
-// ==================================================
+// 1. Settings – used with preprocessors and contain font, colors definitions, etc.
+// ==================================================================================
 
-@import "variables";
-@import "mixins";
-@import "keyframes";
+@import "settings/core";
+@import "settings/colors";
 
 @import "fonts";
 @import "font-spy";
-@import "elements";
 @import "global";
 
-@import "headings";
-@import "sidebar";
-@import "navigation";
-@import "lang";
-@import "footer";
+// 2. Tools – globally used mixins and functions.
+// It’s important not to output any CSS in the first 2 layers.
+// ==================================================================================
 
+@import "tools/mixins";
 
-// Components
-// ==================================================
+// 3. Generic – reset and/or normalize styles, box-sizing definition, etc.
+// This is the first layer which generates actual CSS.
+// ==================================================================================
+
+/*@import "generic/normalize";
+@import "generic/reset";*/
+@import "generic/box-sizing";
+
+// 4. Elements – styling for bare HTML elements (like H1, A, etc.).
+// These come with default styling from the browser so we can redefine them here.
+// ==================================================================================
+
+@import "elements/page";
+@import "elements/lists";
+@import "elements/links";
+@import "elements/buttons";
+@import "elements/video";
+
+// 5. Objects – class-based selectors which define undecorated design patterns,
+// for example media object known from OOCSS
+// ==================================================================================
+
+@import "objects/vertical-interval";
+
+// 6. Components – specific UI components. This is where majority of our work takes
+// place and our UI components are often composed of Objects and Components
+// ==================================================================================
 
 @import "components/device-rotation-change";
+@import "components/intro-header";
 @import "components/loader";
 @import "components/spinner";
 @import "components/mouse";
@@ -43,3 +67,8 @@ $hamburger-layer-color: white;
 @import "components/sub-title";
 @import "components/video";
 @import "components/link-next-slide";
+
+@import "sidebar";
+@import "navigation";
+@import "lang";
+@import "footer";

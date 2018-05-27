@@ -1,16 +1,6 @@
-@include keyframes(stack-opening) {
-  0% {
-    @include opacity(1);
-  }
-  100% {
-    @include opacity(0);
-    top: 40%;
-  }
-}
-
 @include keyframes(stack-shutter) {
   to {
-    @include opacity(0);
+    opacity: 0;
     background-color: white;
   }
 }
@@ -53,7 +43,7 @@
 }
 
 .imh__opening {
-  @include opacity(1);
+  opacity: 1;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -176,7 +166,7 @@
 }
 
 .imh-progress-counter {
-  font-family: "ethos_regular_italic", $font-fallback;
+  font-family: "ethos_regular_italic", serif;
   color: $color-grey-dark;
   display: inline-block;
   position: absolute;

@@ -56,11 +56,13 @@
                                 {{- ('imh.base.home.events.title')|trans -}}
                             {% endblock %}
                         {% endembed %}
-                        {% embed 'ImhBaseBundle:Components:sub-title.html.twig' %}
-                            {% block sub_title %}
-                                {{- ('imh.base.home.events.sub_title')|trans|raw -}}
-                            {% endblock %}
-                        {% endembed %}
+                        <div class="o-vertical-interval-top o-vertical-interval-top-medium@xs-max">
+                            {% embed 'ImhBaseBundle:Components:sub-title.html.twig' %}
+                                {% block sub_title %}
+                                    {{- ('imh.base.home.events.sub_title')|trans|raw -}}
+                                {% endblock %}
+                            {% endembed %}
+                        </div>
                     </div>
 
                     {% include 'ImhBaseBundle:Part:partialEvents.html.twig' %}
@@ -267,7 +269,7 @@
                     imageCtnW = imageCtn.width();
                     windowH = $(window).height();
                     adjustBkgImg(image, imageCtn, imageCtnW, gap, imageRatio, windowH);
-                    $.fn.fullpage.reBuild();
+                    //$.fn.fullpage.reBuild();
                 }, 500);
             });
 
