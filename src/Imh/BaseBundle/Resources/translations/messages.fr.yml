@@ -114,7 +114,6 @@ imh:
       subject:            'Sujet * :'
       message:            'Message * :'
       send:               'Envoyer'
-      mandatory:          'Champs obligatoires'
 
     footer:
       site:           'Ionella-marinutsa.com'

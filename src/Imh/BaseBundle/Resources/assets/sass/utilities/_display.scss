@@ -1,0 +1,123 @@
+.u-nopadding { padding: 0 !important; }
+.u-nopadding-top { padding-top: 0 !important; }
+.u-nopadding-right { padding-right: 0 !important; }
+.u-nopadding-bottom { padding-bottom: 0 !important; }
+.u-nopadding-left { padding-left: 0 !important; }
+
+.u-nomargin { margin: 0 !important; }
+.u-nomargin-top { margin-top: 0 !important; }
+.u-nomargin-right { margin-right: 0 !important; }
+.u-nomargin-bottom { margin-bottom: 0 !important; }
+.u-nomargin-left { margin-left: 0 !important; }
+
+.u-noborder { border: 0 !important; }
+
+.u-overflow-fix {
+    overflow: hidden !important;
+    margin-bottom: -1rem !important;
+}
+
+.u-hidden {
+    display: none !important;
+}
+
+.u-backface-hidden {
+    backface-visibility: hidden !important;
+}
+
+.u-ellipsis {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+
+    .lt-ie10 & {
+        word-wrap: normal !important;
+    }
+}
+
+.u-cursor-pointer {
+    cursor: pointer !important;
+}
+
+.u-nopointer-events {
+    pointer-events: none !important;
+}
+
+.u-pointer-events {
+    pointer-events: auto !important;
+}
+
+.u-pull-left {
+    float: left !important;
+}
+
+.u-pull-right {
+    float: right !important;
+}
+
+.u-relative {
+    position: relative !important;
+}
+
+.u-center-block {
+    margin: 0 auto !important;
+}
+
+.u-width-full {
+    width: 100% !important;
+}
+
+.u-height-full {
+    height: 100% !important;
+}
+
+@media (max-width: $screen-xs-max) {
+
+    .u-hidden\@xs-max {
+        display: none !important;
+    }
+
+    .u-pull-left\@xs-max {
+        float: left !important;
+    }
+
+    .u-pull-right\@xs-max {
+        float: right !important;
+    }
+}
+
+@media (min-width: $screen-sm-min) {
+
+    .u-hidden\@sm-min {
+        display: none !important;
+    }
+
+    .u-pull-left\@sm-min {
+        float: left !important;
+    }
+
+    .u-pull-right\@sm-min {
+        float: right !important;
+    }
+}
+
+@media (max-width: $screen-sm-max) {
+
+    .u-hidden\@sm-max {
+        display: none !important;
+    }
+}
+
+@media (min-width: $screen-md-min) {
+
+    .u-hidden\@md-min {
+        display: none !important;
+    }
+}
+
+@media (max-width: $screen-md-max) {
+
+    .u-hidden\@md-max {
+        display: none !important;
+    }
+}

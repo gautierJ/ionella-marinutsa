@@ -77,21 +77,20 @@
             </script>
 
             {% javascripts output='assets/compiled/js/main.js'
-            '@ImhBaseBundle/Resources/public/bower_components/jquery/dist/jquery.min.js'
-            '@ImhBaseBundle/Resources/public/bower_components/jquery.easing/js/jquery.easing.min.js'
-            '@ImhBaseBundle/Resources/public/bower_components/jquery-mousewheel/jquery.mousewheel.min.js'
-            '@ImhBaseBundle/Resources/public/bower_components/jquery.lazyload/jquery.lazyload.js'
-            '@ImhBaseBundle/Resources/public/bower_components/fullpage.js/dist/jquery.fullpage.js'
-            '@ImhBaseBundle/Resources/public/bower_components/picturefill/dist/picturefill.js'
-            'assets/lib/modernizr/modernizr-custom.js'
-            'assets/lib/porthole/porthole.js'
-            'assets/lib/porthole/porthole.init.js'
-            '@ImhBaseBundle/Resources/assets/js/jquery.fontspy.js'
-            '@ImhBaseBundle/Resources/assets/js/jquery.imh.menumobile.js'
-            '@ImhBaseBundle/Resources/assets/js/ajax.js'
+                '@ImhBaseBundle/Resources/public/bower_components/jquery/dist/jquery.min.js'
+                '@ImhBaseBundle/Resources/public/bower_components/jquery.easing/js/jquery.easing.min.js'
+                '@ImhBaseBundle/Resources/public/bower_components/fontfaceobserver/fontfaceobserver.js'
+                '@ImhBaseBundle/Resources/public/bower_components/jquery-mousewheel/jquery.mousewheel.min.js'
+                '@ImhBaseBundle/Resources/public/bower_components/jquery.lazyload/jquery.lazyload.js'
+                '@ImhBaseBundle/Resources/public/bower_components/fullpage.js/dist/jquery.fullpage.js'
+                '@ImhBaseBundle/Resources/public/bower_components/picturefill/dist/picturefill.js'
+                'assets/lib/modernizr/modernizr-custom.js'
+                'assets/lib/porthole/porthole.js'
+                'assets/lib/porthole/porthole.init.js'
+                '@ImhBaseBundle/Resources/assets/js/jquery.imh.menumobile.js'
+                '@ImhBaseBundle/Resources/assets/js/ajax.js'
             %}
-
-            <script src="{{ asset_url }}"></script>
+                <script src="{{ asset_url }}"></script>
             {% endjavascripts %}
 
             {#FOSJsRoutingBundle#}

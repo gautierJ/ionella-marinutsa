@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 $text-font-stack-default: 'Georgia', 'Times New Roman', 'Times', serif !default;
-$text-font-stack-defered: 'ethos_regular', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-stack-defered: 'EthosRegular', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 
 // Base typographical styles and baseline grid.
 // 1rem = 10px by default
@@ -59,7 +59,15 @@ $base-spacing-unit-medium:               $base-spacing-unit * $base-spacing-unit
 $base-spacing-unit-large:                $base-spacing-unit * $base-spacing-unit-factor-large;
 $base-spacing-unit-x-large:              $base-spacing-unit * $base-spacing-unit-factor-x-large;
 
-
+// ...and this for the fonts
+$base-font-size-xxx-small:               $base-font-size * $base-font-size-factor-xxx-small;
+$base-font-size-xx-small:                $base-font-size * $base-font-size-factor-xx-small;
+$base-font-size-x-small:                 $base-font-size * $base-font-size-factor-x-small;
+$base-font-size-small:                   $base-font-size * $base-font-size-factor-small;
+$base-font-size-large:                   $base-font-size * $base-font-size-factor-large;
+$base-font-size-x-large:                 $base-font-size * $base-font-size-factor-x-large;
+$base-font-size-xx-large:                $base-font-size * $base-font-size-factor-xx-large;
+$base-font-size-xxx-large:               $base-font-size * $base-font-size-factor-xxx-large;
 
 
 $ninepx:                 0.750em;

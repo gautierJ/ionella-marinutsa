@@ -88,8 +88,6 @@
             'use strict';
 
             var assetUrl      = '{{ asset('bundles/imhbase/images/ionella_bw.jpg') }}',
-                //titles      = ['.block-myself h1', '.block-myself h2', '.block-myself h3'],
-                //grTitles    = $(titles.join(', ')),
                 context       = $('[data-body]'),
                 topNav        = context.find('[data-top-navigation]'),
                 nextSlideLink = $('[data-link-next-slide]'),
@@ -168,7 +166,7 @@
                         if (Modernizr.touchevents) {
                             context.one(animEnd, function(e) {
                                 console.log(e.originalEvent.animationName);
-                                if (e.originalEvent.animationName == 'stack-in-height') {
+                                if (e.originalEvent.animationName === 'stack-in-height') {
                                     $(this).delay(5000).addClass('mA_2');
                                     loadFullPage();
                                 }
@@ -198,14 +196,14 @@
                         var leavingSection = $(this);
 
                         //after leaving section 1
-                        if (index == 1 && direction =='down') {
+                        if (index === 1 && direction === 'down') {
                             console.log("Going to section 2!");
                         }
-                        if (index == 2 && direction == 'up') {
+                        if (index === 2 && direction === 'up') {
                             console.log("Going to section 1!");
                         }
 
-                        if (nextIndex != 1 && Modernizr.touchevents) {
+                        if (nextIndex !== 1 && Modernizr.touchevents) {
                             topNav.addClass('is-visible'); //mobile menu only
                         } else {
                             topNav.removeClass('is-visible'); //mobile menu only
@@ -216,12 +214,12 @@
                     afterLoad: function(anchorLink, index) {
                         var loadedSection = $(this);
 
-                        if (index == 1) {
+                        if (index === 1) {
                             $('[data-sidebar]').css('visibility', 'hidden'); //@TODO need improvement
                             $('.fp-show-active').css('visibility', 'hidden'); //@TODO need improvement
 
                             shutter.on(animEnd, function(e) {
-                                if (e.originalEvent.animationName != 'stack-in-height') {
+                                if (e.originalEvent.animationName !== 'stack-in-height') {
                                     context.addClass('mA_3');
                                     $.fn.fullpage.setAllowScrolling(true);
 
@@ -234,7 +232,7 @@
                             $('.fp-show-active').css('visibility', 'visible'); //@TODO need improvement
                         }
 
-                        if (index == 2) {
+                        if (index === 2) {
                             var firstImg = imageCtn.find('img:first');
 
                             nextSlideLink.hover(function() {
@@ -249,12 +247,6 @@
                 });
                 $.fn.fullpage.setAllowScrolling(false);
             };
-
-            /*grTitles.fontSpy({
-                onLoad: 'hideMe',
-                onFail: 'fontFail fontCall',
-                callback: function() { fontLoaded = true; }
-            });*/
 
             var delay = (function() {
                 var timer = 0;
@@ -307,8 +299,8 @@
                 if (!e) e = event;
                 var direction = (e.detail < 0 || e.wheelDelta > 0) ? 1 : -1;
 
-                if (direction == 1) wheelCount = 0;
-                if (wheelCount == 4 && direction == -1) {
+                if (direction === 1) wheelCount = 0;
+                if (wheelCount === 4 && direction === -1) {
                     context.addClass('mA_2');
                     loadFullPage();
                 }

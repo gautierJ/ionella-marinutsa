@@ -55,7 +55,10 @@ class ContactFormType extends AbstractType
             ->add('message', 'textarea', array(
                 'label' => 'imh.base.contact.message',
                 'trim' => false,
-                'attr' => array('rows' => 10, 'cols' => 40),
+                'attr' => array(
+                    'rows' => 10,
+                    'cols' => 40
+                ),
                 'required' => true,
                 'constraints' => [
                     new NotBlank([

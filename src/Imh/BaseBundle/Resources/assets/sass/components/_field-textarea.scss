@@ -1,0 +1,25 @@
+.c-field-textarea {
+  display: block;
+  resize: vertical;
+  height: 12rem;
+  font-size: $fourteenpx;
+  background-color: $color-grey-extremlight;
+  color: $color-grey-dark;
+  border: 1px solid $color-grey-lighter;
+  padding: 12px;
+  transition: border 0.2s ease-in, box-shadow 0.2s ease-in;
+  width: 100%;
+
+  &:focus {
+    border-color: $color-grey-darker;
+    outline: none;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+
+  .c-field-textarea {
+    height: 35.5rem;
+  }
+}
+

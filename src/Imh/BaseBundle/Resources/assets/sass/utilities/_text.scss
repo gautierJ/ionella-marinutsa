@@ -1,0 +1,112 @@
+.u-text-center {
+    text-align: center !important;
+}
+
+.u-text-left {
+    text-align: left !important;
+}
+
+.u-text-right {
+    text-align: right !important;
+}
+
+.u-text-justify {
+    text-align: justify !important;
+}
+
+.u-text-underline {
+    text-decoration: underline !important;
+}
+
+.u-text-uppercase {
+    text-transform: uppercase !important;
+}
+
+.u-text-line-through {
+    text-decoration: line-through !important;
+}
+
+.u-text-italic {
+    font-style: italic !important;
+}
+
+// font weight
+
+.u-text-light {
+    font-weight: 100 !important;
+}
+
+.u-text-regular {
+    font-weight: 400 !important;
+}
+
+.u-text-medium {
+    font-weight: 500 !important;
+}
+
+.u-text-bold {
+    font-weight: 700 !important;
+}
+
+// font size
+
+.u-text-size-xxxs {
+    @include imh-font-size($base-font-size-xxx-small, "auto", true);
+}
+
+.u-text-size-xxs {
+    @include imh-font-size($base-font-size-xx-small, "auto", true);
+}
+
+.u-text-size-xs {
+    @include imh-font-size($base-font-size-x-small, "auto", true);
+}
+
+.u-text-size-sm {
+    @include imh-font-size($base-font-size-small, "auto", true);
+}
+
+.u-text-size-md {
+    @include imh-font-size($base-font-size, "auto", true);
+}
+
+.u-text-size-lg {
+    @include imh-font-size($base-font-size-large, "auto", true);
+}
+
+.u-text-size-xl {
+    @include imh-font-size($base-font-size-x-large, "auto", true);
+}
+
+.u-text-size-xxl {
+    @include imh-font-size($base-font-size-xx-large, "auto", true);
+}
+
+.u-text-size-xxxl {
+    @include imh-font-size($base-font-size-xxx-large, "auto", true);
+}
+
+.u-text-nowrap {
+    white-space: nowrap;
+}
+
+@media (max-width: $screen-sm-max) {
+    .u-text-center\@sm-max {
+        text-align: center !important;
+    }
+}
+
+@media (min-width: $screen-sm-min) {
+    .u-text-center\@sm-min {
+        text-align: center !important;
+    }
+    .u-text-right\@sm-min {
+        text-align: right !important;
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    .u-text-center\@xs-max {
+        text-align: center !important;
+    }
+}

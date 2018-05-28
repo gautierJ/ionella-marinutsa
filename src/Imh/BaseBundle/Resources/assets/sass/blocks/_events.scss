@@ -66,7 +66,7 @@ $fa-font-path: "/bundles/imhbase/bower_components/fontawesome/fonts";
 }
 
 .imh-block-events__month {
-  font-family: 'ralewaylight', sans-serif;
+  font-family: RalewayLight, sans-serif;
   font-size: $fourteenpx;
   line-height: 1em;
   margin: 0;
@@ -74,13 +74,13 @@ $fa-font-path: "/bundles/imhbase/bower_components/fontawesome/fonts";
 
 .imh-block-events__day {
   font-size: 70px;
-  font-family: "Knockout-HTF49-Liteweight", sans-serif;
+  font-family: Knockout, sans-serif;
   margin: 0;
   line-height: 68px;
 }
 
 .imh-block-events__time {
-  font-family: "Knockout-HTF49-Liteweight", sans-serif;
+  font-family: Knockout, sans-serif;
   font-size: $twentytwopx;
   line-height: 30px;
 }
@@ -177,7 +177,7 @@ $fa-font-path: "/bundles/imhbase/bower_components/fontawesome/fonts";
 }
 
 .imh-block-events__more {
-  font-family: "Knockout-HTF49-Liteweight", sans-serif;
+  font-family: Knockout, sans-serif;
   color: $color-grey-darker;
   font-size: $thirteenpx;
   background-color: white;
@@ -188,7 +188,7 @@ $fa-font-path: "/bundles/imhbase/bower_components/fontawesome/fonts";
 }
 
 .imh-block-events__title {
-  font-family: 'ralewayregular', sans-serif;;
+  font-family: RalewayRegular, sans-serif;
   margin: 4em 0 1.2em;
   @include transition(all 0.35s);
   transform: translate3d(0, 15px, 0);
@@ -213,29 +213,29 @@ $fa-font-path: "/bundles/imhbase/bower_components/fontawesome/fonts";
 }
 
 .imh-block-events__title-lower {
-  font-family: 'ralewaylight', sans-serif;
+  font-family: RalewayLight, sans-serif;
   text-transform: lowercase;
 }
 
 .imh-block-events__title-emphased {
-  font-family: 'ralewaysemibold', sans-serif;
+  font-family: RalewaySemibold, sans-serif;
   display: inline-block;
   margin-top: 0.2em;
   line-height: 1.2em;
 }
 
 .imh-block-events__description {
-  font-family: 'ralewayregular', sans-serif;
+  font-family: RalewayRegular, sans-serif;
   font-size: $basepx;
 }
 
 .imh-block-events__description--small {
-  font-family: 'ralewayregular', sans-serif;
+  font-family: RalewayRegular, sans-serif;
   font-size: $elevenpx;
 }
 
 .imh-block-events__composer-list {
-  font-family: 'ralewaysemibold_italic', sans-serif;
+  font-family: RalewaySemiboldItalic, sans-serif;
   margin-top: 1em;
   font-size: $thirteenpx;
 }

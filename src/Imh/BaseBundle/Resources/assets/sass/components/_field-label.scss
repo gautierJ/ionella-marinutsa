@@ -1,0 +1,8 @@
+.c-field-label {
+  @include imh-font('ralewaysemibold', $fourteenpx);
+  display: block;
+  color: $color-grey-dark;
+  vertical-align: middle;
+  margin-bottom: 1rem;
+  font-weight: normal;
+}

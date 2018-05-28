@@ -114,7 +114,6 @@ imh:
       subject:        'Тема письма* :'
       message:        'Текст сообщения* :'
       send:           'Отправить'
-      mandatory:      'Поля обязательные для заполнения'
 
     footer:
       site:           'Ionella-marinutsa.com'

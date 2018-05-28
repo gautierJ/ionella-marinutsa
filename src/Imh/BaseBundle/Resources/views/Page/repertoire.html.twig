@@ -79,10 +79,10 @@
     {% javascripts output='assets/compiled/js/repertoire.js'
     '@ImhBaseBundle/Resources/assets/js/jquery.imh.scrollmove.js'
     %}
-    <script type="text/javascript" src="{{ asset_url }}"></script>
+        <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
 
-    <script type="text/javascript">
+    <script>
         $(function () {
             'use strict';
 
@@ -91,6 +91,8 @@
                 effect : 'fadeIn',
                 placeholder: '../../../bundles/imhbase/images/empty.gif'
             });
+
+            $('#content').contentHeightAdjust();
 
             if (!Modernizr.touchevents) {
                 $('[data-sidebar]').scrollMove(); // Menu plugin

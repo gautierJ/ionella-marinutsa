@@ -1,0 +1,7 @@
+/**
+ * Attach our clearfix mixin to a utility class.
+ */
+
+.u-clearfix {
+    @include imh-clearfix();
+}

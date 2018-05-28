@@ -57,93 +57,6 @@ $fa-font-path: "/bundles/imhbase/bower_components/fontawesome/fonts";
   padding-bottom: 60px;
 }
 
-.imh__contact {
-  @include clearfix();
-}
-
-.imh__contact-form {
-  padding: 0;
-
-  label {
-    color: $color-grey-dark;
-    font-size: $fourteenpx;
-    display: inline-block;
-    width: 40%;
-    vertical-align: middle;
-    margin-bottom: 0;
-    font-weight: normal;
-  }
-
-  input, textarea {
-    font-size: $fourteenpx;
-    background-color: $color-grey-extremlight;
-    color: $color-grey-dark;
-    border: 1px solid $color-grey-medium;
-    padding: 8px 12px;
-    transition: border .2s ease-in, box-shadow .2s ease-in;
-  }
-
-  input {
-    vertical-align: middle;
-    width: 60%;
-  }
-
-  textarea {
-    resize: vertical;
-  }
-
-  input:focus, textarea:focus {
-    border: 1px solid $color-grey-darker;
-    outline: none;
-  }
-}
-
-.imh__contact-mandatory {
-  color: $color-grey-dark;
-  font-size: $basepx;
-  margin-top: 20px;
-}
-
-.imh__contact-info {
-
-  > div {
-    margin-bottom: 20px;
-  }
-}
-
-.imh__contact-message {
-
-  label {
-    margin-top: 8px;
-  }
-
-  textarea {
-    vertical-align: top;
-    width: 60%;
-    height: 110px;
-  }
-}
-
-.imh__contact-message-send {
-  font-size: $basepx;
-  margin-top: 10px;
-  color: $color-grey-dark;
-
-  button {
-    text-transform: uppercase;
-    background-color: white;
-    border: 1px solid $color-grey-medium;
-    padding: 9px 24px 8px;
-    @include transition(all, .2s, ease-in, 0s);
-
-    &:hover {
-      background-color: $color-grey-darker;
-      border: 1px solid $color-grey-darker;
-      color: white;
-    }
-  }
-}
-
 // Media queries
 // ==================================================
 
@@ -154,23 +67,8 @@ $fa-font-path: "/bundles/imhbase/bower_components/fontawesome/fonts";
   }
 
   .imh__contact-form {
-    background: url("/bundles/imhbase/images/stripes.png");
-    padding: 80px 20px 40px;
+    //background: url("/bundles/imhbase/images/stripes.png");
+
   }
 
-  .imh__contact-message {
-
-    textarea {
-      height: 180px;
-    }
-  }
-
-  .imh__contact-message-send {
-    margin-top: 30px;
-    font-size: $thirteenpx;
-  }
-
-  .imh__contact-mandatory {
-    font-size: $fourteenpx;
-  }
 }

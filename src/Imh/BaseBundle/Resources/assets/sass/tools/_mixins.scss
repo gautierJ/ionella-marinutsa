@@ -109,3 +109,97 @@
   -o-animation: #{$str};
   animation: #{$str};
 }
+
+///* ========================================================================
+//   # Clearfix
+//   ======================================================================== */
+
+// Mixin to drop micro clearfix into a selector. Further reading:
+// http://www.cssmojo.com/the-very-latest-clearfix-reloaded/
+//
+// .usage {
+//   @include imh-clearfix();
+// }
+@mixin imh-clearfix() {
+
+  &:after {
+    content: "" !important;
+    display: block !important;
+    clear: both !important;
+  }
+}
+
+/* ========================================================================
+   # Font-size
+   ======================================================================== */
+
+// Generate a font-size and baseline-compatible line-height.
+@mixin imh-font-size($font-size, $line-height: auto, $important: false) {
+
+  @if ($important == true) {
+    $important: !important;
+  } @elseif ($important == false) {
+    $important: null;
+  } @else {
+    @error "'#{$important}' needs to be 'true' or 'false'."
+  }
+
+  font-size: $font-size $important;
+
+  @if ($line-height == 'auto') {
+    line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size) $important;
+  }
+
+  @else {
+
+    @if (type-of($line-height) == number or $line-height == 'inherit' or $line-height == 'normal') {
+      line-height: $line-height $important;
+    }
+
+    @elseif ($line-height != 'none' and $line-height != false) {
+      @error "D'oh! '#{$line-height}' is not a valid value for '$line-height'."
+    }
+  }
+}
+
+/* ========================================================================
+   # Font-face
+   ======================================================================== */
+
+@mixin imh-font-face($font-family, $file-path, $font-weight: normal, $font-style: normal, $font-stretch: normal)
+{
+  @font-face
+  {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-stretch: $font-stretch;
+
+    src: url('#{$file-path}.eot');
+    src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+    url('#{$file-path}.woff2') format('woff2'),
+    url('#{$file-path}.woff') format('woff'),
+    url('#{$file-path}.ttf') format('truetype'),
+    url('#{$file-path}.svg##{$font-family}') format('svg');
+  }
+  // Chrome for Windows rendering fix: http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
+  @media screen and (-webkit-min-device-pixel-ratio: 0)
+  {
+    @font-face
+    {
+      font-family: $font-family;
+
+      src: url('#{$file-path}.svg##{$font-family}') format('svg');
+    }
+  }
+}
+
+/* ========================================================================
+   # Font
+   ======================================================================== */
+
+@mixin imh-font($weight: normal, $size: 14px, $lineHeight: $base-line-height-unitless) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
+}

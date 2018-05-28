@@ -113,7 +113,6 @@ imh:
       subject:            'Subject * :'
       message:            'Message * :'
       send:               'Send'
-      mandatory:          'Mandatory fields'
 
     footer:
       site:         'Ionella-marinutsa.com'

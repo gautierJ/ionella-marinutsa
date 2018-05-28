@@ -6,7 +6,7 @@
     {% stylesheets output='assets/compiled/css/contact.css' filter='compass, cssrewrite'
     '@ImhBaseBundle/Resources/assets/sass/page/contact.scss'
     %}
-    <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
+    <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
     {% endstylesheets %}
 {% endblock %}
 
@@ -28,48 +28,66 @@
     <div class="container imh-container">
         <section class="imh-container--wrapper imh-container--shadows">
             <div class="row">
-                <div class="col-xs-24 hidden-md hidden-lg">
-                    {% embed 'ImhBaseBundle:Components:title-secondary.html.twig' %}
-                        {% block title %}
-                            {{- 'imh.base.contact.main_section-title'|trans -}}
-                        {% endblock %}
-                    {% endembed %}
+                <div class="col-xs-24">
+                    <div class="hidden-md hidden-lg">
+                        {% embed 'ImhBaseBundle:Components:title-secondary.html.twig' %}
+                            {% block title %}
+                                {{- 'imh.base.contact.main_section-title'|trans -}}
+                            {% endblock %}
+                        {% endembed %}
+                    </div>
+                    <div class="o-vertical-interval-top-medium">
+                        {% embed 'ImhBaseBundle:Components:sub-title.html.twig' %}
+                            {% block sub_title %}
+                                {{- 'imh.base.contact.answer'|trans|raw -}}
+                            {% endblock %}
+                        {% endembed %}
+                    </div>
                 </div>
                 <div class="col-xs-24 ">
-                    {% embed 'ImhBaseBundle:Components:sub-title.html.twig' %}
-                        {% block sub_title %}
-                            {{- 'imh.base.contact.answer'|trans|raw -}}
-                        {% endblock %}
-                    {% endembed %}
-                </div>
+                    <div class="o-vertical-interval-bottom-medium"></div>
 
-                <div class="col-xs-24 ">
                     {{ form_start(form, {'attr': {'class': 'imh__contact-form'}}) }}
-                        {{ form_errors(form) }}
+                    {{ form_errors(form) }}
 
-                        <div class="row imh__contact">
-                            <div class="col-xs-24 col-sm-12 imh__contact-info">
-                                {{ form_row(form.lastName) }}
-                                {{ form_row(form.firstName) }}
-                                {{ form_row(form.email) }}
-                                {{ form_row(form.subject) }}
+                    <div class="row">
+                        <div class="col-xs-24 col-sm-12">
+                            <div class="o-vertical-interval-bottom">
+                                {{ form_label(form.firstName, null, {'label_attr': {'class': 'c-field-label'}}) }}
+                                {{ form_errors(form.firstName) }}
+                                {{ form_widget(form.firstName, { 'attr': {'class': 'c-field-text'} }) }}
                             </div>
-                            <div class="col-xs-24 col-sm-12 imh__contact-message">
-                                {{ form_label(form.message) }}{{ form_errors(form.message) }}{{ form_widget(form.message) }}
+                            <div class="o-vertical-interval-bottom">
+                                {{ form_label(form.lastName, null, {'label_attr': {'class': 'c-field-label'}}) }}
+                                {{ form_errors(form.lastName) }}
+                                {{ form_widget(form.lastName, { 'attr': {'class': 'c-field-text'} }) }}
+                            </div>
+                            <div class="o-vertical-interval-bottom">
+                                {{ form_label(form.email, null, {'label_attr': {'class': 'c-field-label'}}) }}
+                                {{ form_errors(form.email) }}
+                                {{ form_widget(form.email, { 'attr': {'class': 'c-field-text'} }) }}
+                            </div>
+                            <div class="o-vertical-interval-bottom">
+                                {{ form_label(form.subject, null, {'label_attr': {'class': 'c-field-label'}}) }}
+                                {{ form_errors(form.subject) }}
+                                {{ form_widget(form.subject, { 'attr': {'class': 'c-field-text'} }) }}
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-24">
-                                <p class="imh__contact-mandatory">* {{ 'imh.base.contact.mandatory'|trans }}</p>
-                            </div>
+                        <div class="col-xs-24 col-sm-12">
+                            {{ form_label(form.message, null, {'label_attr': {'class': 'c-field-label'}}) }}
+                            {{ form_errors(form.message) }}
+                            {{ form_widget(form.message, { 'attr': {'class': 'c-field-textarea'} }) }}
                         </div>
-                        <div class="row">
-                            <div class="col-xs-24">
-                                <div class="imh__contact-message-send pull-right">
-                                    {{ form_row(form.send) }}
-                                </div>
-                            </div>
+                    </div>
+
+                    <div class="o-vertical-interval-bottom-large"></div>
+
+                    <div class="row">
+                        <div class="col-xs-24 u-text-center@sm-min">
+                            {{ form_widget(form.send, { 'attr': {'class': 'c-field-button c-field-button--big'} }) }}
                         </div>
+                    </div>
+
                     {{ form_end(form) }}
                 </div>
             </div>
@@ -85,10 +103,10 @@
     {% javascripts output='assets/compiled/js/contact.js'
         '@ImhBaseBundle/Resources/assets/js/jquery.imh.scrollmove.js'
     %}
-    <script type="text/javascript" src="{{ asset_url }}"></script>
+    <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
 
-    <script type="text/javascript">
+    <script>
         $(function () {
             'use strict';
 

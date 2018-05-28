@@ -19,8 +19,6 @@ $hamburger-layer-color: white;
 @import "settings/core";
 @import "settings/colors";
 
-@import "fonts";
-@import "font-spy";
 @import "global";
 
 // 2. Tools – globally used mixins and functions.
@@ -41,6 +39,7 @@ $hamburger-layer-color: white;
 // These come with default styling from the browser so we can redefine them here.
 // ==================================================================================
 
+@import "elements/fonts";
 @import "elements/page";
 @import "elements/lists";
 @import "elements/links";
@@ -67,8 +66,20 @@ $hamburger-layer-color: white;
 @import "components/sub-title";
 @import "components/video";
 @import "components/link-next-slide";
+@import "components/field-button";
+@import "components/field-label";
+@import "components/field-text";
+@import "components/field-textarea";
 
 @import "sidebar";
 @import "navigation";
 @import "lang";
 @import "footer";
+
+// 7. Utilities - utilities and helper classes with ability to override anything
+// which goes before in the triangle, eg. hide helper class
+// ==================================================================================
+
+@import "utilities/display";
+@import "utilities/text";
+@import "utilities/clearfix";
