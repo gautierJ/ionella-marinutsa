@@ -5,7 +5,7 @@
                 <div class="col-xs-24 col-sm-9 col-md-11">
                     <div class="c-picture-block__media-container">
                         {% embed 'ImhBaseBundle:Components:image.html.twig' with {'rounded': true} %}
-                            {%- block image_data_original -%}
+                            {%- block image_src -%}
                                 {{ asset('bundles/imhbase/images/'~('imh.base.repertoire.concert.'~i~'.name')|trans~'.jpg') }}
                             {%- endblock -%}
                             {%- block image_alt -%}
@@ -23,7 +23,7 @@
                         {% endembed %}
                         <p class="c-picture-block__life / o-vertical-interval-top-x-small">{{ ('imh.base.repertoire.concert.'~i~'.life')|trans }}</p>
                         <p class="c-picture-block__work / o-vertical-interval">{{ ('imh.base.repertoire.concert.'~i~'.work')|trans }}</p>
-                        <p class="c-picture-block__arrangement / o-vertical-interval-bottom-x-small">{{ ('imh.base.repertoire.concert.'~i~'.arrangement')|trans }}</p>
+                        <p class="c-picture-block__arrangement / u-nomargin">{{ ('imh.base.repertoire.concert.'~i~'.arrangement')|trans }}</p>
                         <div class="c-picture-block__duration">
                             {{ ('imh.base.repertoire.concert.duration')|trans }}{{ ('imh.base.repertoire.concert.'~i~'.duration')|trans }}
                         </div>
