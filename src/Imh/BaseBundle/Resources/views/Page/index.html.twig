@@ -89,7 +89,7 @@
 
             var assetUrl      = '{{ asset('bundles/imhbase/images/ionella_bw.jpg') }}',
                 context       = $('[data-body]'),
-                topNav        = context.find('[data-top-navigation]'),
+                menuMobile    = context.find('[data-menumobile]'),
                 nextSlideLink = $('[data-link-next-slide]'),
                 nextLink      = $('[data-next]'),
                 opening       = $('[data-opening]'),
@@ -199,14 +199,18 @@
                         if (index === 1 && direction === 'down') {
                             console.log("Going to section 2!");
                         }
+
                         if (index === 2 && direction === 'up') {
                             console.log("Going to section 1!");
                         }
 
-                        if (nextIndex !== 1 && Modernizr.touchevents) {
-                            topNav.addClass('is-visible'); //mobile menu only
-                        } else {
-                            topNav.removeClass('is-visible'); //mobile menu only
+                        if (Modernizr.touchevents) {
+                            if (nextIndex > 1 ) {
+                                menuMobile.data("plugin_imhMenuMobile").makeMenuAnimatable(); // call public plugin method
+                                menuMobile.data("plugin_imhMenuMobile").makeMenuVisible();
+                            } else {
+                                menuMobile.data("plugin_imhMenuMobile").makeMenuInvisible();
+                            }
                         }
 
                         checkLastSlide(nextIndex);

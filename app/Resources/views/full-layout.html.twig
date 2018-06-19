@@ -87,7 +87,7 @@
                 'assets/lib/modernizr/modernizr-custom.js'
                 'assets/lib/porthole/porthole.js'
                 'assets/lib/porthole/porthole.init.js'
-                '@ImhBaseBundle/Resources/assets/js/jquery.imh.menumobile.js'
+                '@ImhBaseBundle/Resources/assets/js/plugins/jquery.imh-menumobile.js'
                 '@ImhBaseBundle/Resources/assets/js/ajax.js'
             %}
                 <script src="{{ asset_url }}"></script>
@@ -98,15 +98,19 @@
             <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
 
             <script>
-                $(function () {
-                    'use strict';
-                    if (Modernizr.touchevents) $('[data-top-navigation]').menumobile();
-                    $(document).trigger('enhance');
+                $(function() {
+                    "use strict";
+
+                    if (Modernizr.touchevents) {
+                        $("[data-menumobile]").imhMenuMobile();
+                    }
+
+                    $(document).trigger("enhance");
 
                     // Lazy load
-                    $('img.lazy').show().lazyload({
-                        effect : 'fadeIn',
-                        placeholder: '../../../bundles/imhbase/images/empty.gif'
+                    $("img.lazy").show().lazyload({
+                        effect : "fadeIn",
+                        placeholder: "../../../bundles/imhbase/images/empty.gif"
                     });
                 });
             </script>

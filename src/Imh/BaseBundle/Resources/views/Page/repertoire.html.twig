@@ -57,12 +57,14 @@
 
     <script>
         $(function () {
-            'use strict';
+            "use strict";
 
-            $('#content').contentHeightAdjust();
+            $("#content").contentHeightAdjust();
 
             if (!Modernizr.touchevents) {
-                $('[data-sidebar]').scrollMove(); // Menu plugin
+                $("[data-sidebar]").scrollMove(); // Menu plugin
+            } else {
+                $("[data-menumobile]").data("plugin_imhMenuMobile").makeMenuVisible(); // Call public plugin method
             }
         });
     </script>
