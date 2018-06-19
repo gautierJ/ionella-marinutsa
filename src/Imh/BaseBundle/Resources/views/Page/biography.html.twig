@@ -27,13 +27,15 @@
                         </div>
                         <div class="col-xs-24">
                             <div class="hidden-md">
-                                {% embed 'ImhBaseBundle:Components:title-secondary.html.twig' with {
-                                    'titleSecondaryInside': {'modifierClasses': 'c-title-secondary__inside--ultralight'}
-                                }%}
-                                    {% block title %}
-                                        {{ 'imh.base.biography.main_section-title'|trans }}
-                                    {% endblock %}
-                                {% endembed %}
+                                <div class="o-vertical-interval-medium">
+                                    {% embed 'ImhBaseBundle:Components:title-secondary.html.twig' with {
+                                        'titleSecondaryInside': {'modifierClasses': 'c-title-secondary__inside--ultralight'}
+                                    }%}
+                                        {% block title %}
+                                            {{ 'imh.base.biography.main_section-title'|trans }}
+                                        {% endblock %}
+                                    {% endembed %}
+                                </div>
                             </div>
 
                             <div class="imh__biography-text">
@@ -151,11 +153,6 @@
             } else {
                 $sT.removeClass(cssClosed).trigger('click').off(); // Open prizes menu on mobile / tablet
             }
-
-            $('img.lazy').show().lazyload({
-                effect : 'fadeIn',
-                placeholder: '../../../bundles/imhbase/images/empty.gif'
-            });
 
             if (Modernizr.mq('(min-width: 768px)')) { //
                 sly = new Sly($text, {

@@ -69,7 +69,7 @@
 {% endblock %}
 
 {% block main %}
-    <img class="imh__bkg-image lazy" data-original="{{ asset('bundles/imhbase/images/notes.jpg') }}" />
+    <img class="imh__bkg-image / lazy" data-original="{{ asset('bundles/imhbase/images/notes.jpg') }}" />
     <noscript><img src="{{ asset('bundles/imhbase/images/notes.jpg') }}" alt="Score"></noscript>
 
     <div class="container imh-container">
@@ -216,11 +216,6 @@
                 $spinner      = $('[data-spinner]'),
                 $fb           = $('[data-fb-share]'),
                 $tw           = $('[data-tw]');
-
-            $('img.lazy').show().lazyload({
-                effect : 'fadeIn',
-                placeholder: '../../../../bundles/imhbase/images/empty.gif'
-            });
 
             if (!Modernizr.touchevents) {
                 $('.navigation-menu').scrollMove(); // Menu plugin

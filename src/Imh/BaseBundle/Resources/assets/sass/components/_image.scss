@@ -1,0 +1,7 @@
+.c-image {
+  @include imh-responsive-image();
+}
+
+.c-image--rounded {
+  border-radius: 50%;
+}

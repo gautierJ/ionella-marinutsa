@@ -102,6 +102,12 @@
                     'use strict';
                     if (Modernizr.touchevents) $('[data-top-navigation]').menumobile();
                     $(document).trigger('enhance');
+
+                    // Lazy load
+                    $('img.lazy').show().lazyload({
+                        effect : 'fadeIn',
+                        placeholder: '../../../bundles/imhbase/images/empty.gif'
+                    });
                 });
             </script>
         {% endblock %}

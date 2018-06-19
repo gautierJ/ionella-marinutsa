@@ -131,9 +131,9 @@
 
 /* ========================================================================
    # Font-size
+   # Generate a font-size and baseline-compatible line-height.
    ======================================================================== */
 
-// Generate a font-size and baseline-compatible line-height.
 @mixin imh-font-size($font-size, $line-height: auto, $important: false) {
 
   @if ($important == true) {
@@ -202,4 +202,15 @@
   font-size: $size;
   font-weight: $weight;
   line-height: $lineHeight;
+}
+
+/* ========================================================================
+   # Responsive image
+   # Keep images from scaling beyond the width of their parents.
+   ======================================================================== */
+
+@mixin imh-responsive-image($display: block) {
+  display: $display;
+  max-width: 100%; // Set a maximum relative to the parent
+  height: auto; // Scale the height according to the width, otherwise you get stretching
 }
