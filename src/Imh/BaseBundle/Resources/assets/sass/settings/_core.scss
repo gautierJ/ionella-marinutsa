@@ -43,14 +43,14 @@ $base-spacing-unit-factor-medium:        1.5     !default; // 3.0rem
 $base-spacing-unit-factor-large:         2       !default; // 4.0rem
 $base-spacing-unit-factor-x-large:       4       !default; // 8.0rem
 
-$base-font-size-factor-xxx-small:        0.6875  !default; // 1.1rem
-$base-font-size-factor-xx-small:         0.750   !default; // 1.2rem
-$base-font-size-factor-x-small:          0.8125  !default; // 1.3rem
-$base-font-size-factor-small:            0.875   !default; // 1.4rem
-$base-font-size-factor-large:            1.125   !default; // 1.8rem
-$base-font-size-factor-x-large:          1.250   !default; // 2.0rem
-$base-font-size-factor-xx-large:         1.375   !default; // 2.2rem
-$base-font-size-factor-xxx-large:        1.5     !default; // 2.4rem
+$base-font-size-factor-xx-small:         0.916   !default; // 1.1rem
+$base-font-size-factor-x-small:          1.083   !default; // 1.3rem
+$base-font-size-factor-small:            1.166   !default; // 1.4rem
+$base-font-size-factor-medium:           1.333   !default; // 1.6rem
+$base-font-size-factor-large:            1.5     !default; // 1.8rem
+$base-font-size-factor-x-large:          1.666   !default; // 2.0rem
+$base-font-size-factor-xx-large:         1.833   !default; // 2.2rem
+$base-font-size-factor-xxx-large:        2       !default; // 2.4rem
 
 // This can be used for the layout...
 $base-spacing-unit-x-small:              $base-spacing-unit * $base-spacing-unit-factor-x-small;
@@ -60,10 +60,10 @@ $base-spacing-unit-large:                $base-spacing-unit * $base-spacing-unit
 $base-spacing-unit-x-large:              $base-spacing-unit * $base-spacing-unit-factor-x-large;
 
 // ...and this for the fonts
-$base-font-size-xxx-small:               $base-font-size * $base-font-size-factor-xxx-small;
 $base-font-size-xx-small:                $base-font-size * $base-font-size-factor-xx-small;
 $base-font-size-x-small:                 $base-font-size * $base-font-size-factor-x-small;
 $base-font-size-small:                   $base-font-size * $base-font-size-factor-small;
+$base-font-size-medium:                  $base-font-size * $base-font-size-factor-medium;
 $base-font-size-large:                   $base-font-size * $base-font-size-factor-large;
 $base-font-size-x-large:                 $base-font-size * $base-font-size-factor-x-large;
 $base-font-size-xx-large:                $base-font-size * $base-font-size-factor-xx-large;

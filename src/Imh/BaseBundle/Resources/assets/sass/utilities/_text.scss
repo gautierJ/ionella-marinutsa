@@ -50,10 +50,6 @@
 
 // font size
 
-.u-text-size-xxxs {
-    @include imh-font-size($base-font-size-xxx-small, "auto", true);
-}
-
 .u-text-size-xxs {
     @include imh-font-size($base-font-size-xx-small, "auto", true);
 }
