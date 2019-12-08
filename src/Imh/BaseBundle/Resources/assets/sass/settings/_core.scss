@@ -26,11 +26,11 @@ $gutter-internal: 1.5rem;
 
 // Gutter map to use these values dynamically in mixins
 $gutter: (
-        horizontal: 2rem,
-        horizontal-sm: 1.5rem,
-        vertical: 2rem,
-        vertical-sm: 3rem,
-        internal: 1.5rem
+    horizontal: 2rem,
+    horizontal-sm: 1.5rem,
+    vertical: 2rem,
+    vertical-sm: 3rem,
+    internal: 1.5rem
 );
 
 // How many times larger/smaller than the default should our spacing unit
@@ -70,9 +70,8 @@ $base-font-size-xx-large:                $base-font-size * $base-font-size-facto
 $base-font-size-xxx-large:               $base-font-size * $base-font-size-factor-xxx-large;
 
 
-$ninepx:                 0.750em;
+
 $tenpx:                  0.833em;
-$elevenpx:               0.917em;
 $basepx:                 1em;
 $thirteenpx:             1.083em;
 $fourteenpx:             1.167em;
@@ -82,6 +81,3 @@ $eighteenpx:             1.500em;
 $twentypx:               1.667em;
 $twentytwopx:            1.833em;
 $twentyeightpx:          2.333em;
-$thirtypx:               2.500em;
-$fourtypx:               3.333em;
-$sixtyfourpx:            5.333em;

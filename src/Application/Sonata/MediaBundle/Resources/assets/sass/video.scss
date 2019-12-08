@@ -2,7 +2,7 @@ $fa-font-path: "/bundles/imhbase/bower_components/fontawesome/fonts";
 @import "app"; //this is imported from Imh bundle -> see assetic compass configuration
 
 .imh-container--wrapper {
-  padding-bottom: 60px;
+  padding-bottom: 6rem;
 }
 
 .media-content {
@@ -130,7 +130,7 @@ $fa-font-path: "/bundles/imhbase/bower_components/fontawesome/fonts";
 .imh-video-progress-bar-time {
   display: inline-block;
   vertical-align: middle;
-  font-size: $elevenpx;
+  font-size: $base-font-size-xx-small;
   text-align: right;
 }
 
@@ -248,7 +248,7 @@ $fa-font-path: "/bundles/imhbase/bower_components/fontawesome/fonts";
   width: 43%;
   display: inline-block;
   vertical-align: middle;
-  font-size: $elevenpx;
+  font-size: $base-font-size-xx-small;
   line-height: 1.1em;
 }
 
@@ -337,7 +337,7 @@ $fa-font-path: "/bundles/imhbase/bower_components/fontawesome/fonts";
 
     a {
       position: relative;
-      font-size: $elevenpx;
+      font-size: $base-font-size-xx-small;
       height: 62px;
       color: $color-grey-medium;
       display: table-cell;
@@ -504,7 +504,7 @@ $fa-font-path: "/bundles/imhbase/bower_components/fontawesome/fonts";
 
     .title {
       display: block;
-      font-size: $elevenpx;
+      font-size: $base-font-size-xx-small;
       color: $color-grey-darker;
       text-overflow: ellipsis;
       overflow: hidden;

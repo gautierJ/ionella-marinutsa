@@ -35,3 +35,6 @@ services:
         class:  Twig_Extension_Debug
         tags:
              - { name: 'twig.extension' }
+
+twig:
+    cache: false

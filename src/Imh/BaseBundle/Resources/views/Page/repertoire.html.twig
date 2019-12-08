@@ -17,14 +17,12 @@
     <div class="container imh-container">
         <div class="imh-container--wrapper imh-container--shadows">
             <section class="imh-repertoire">
-                <div class="col-xs-24 hidden-md hidden-lg">
-                    <div class="o-vertical-interval-medium">
-                        {% embed 'ImhBaseBundle:Components:title-secondary.html.twig' %}
-                            {% block title %}
-                                {{ 'imh.base.repertoire.main_section-title'|trans }}
-                            {% endblock %}
-                        {% endembed %}
-                    </div>
+                <div class="o-vertical-interval-large">
+                    {% embed 'ImhBaseBundle:Components:title-secondary.html.twig' %}
+                        {% block title %}
+                            {{ 'imh.base.repertoire.main_section-title'|trans }}
+                        {% endblock %}
+                    {% endembed %}
                 </div>
                 {% include 'ImhBaseBundle:Components:picture-block.html.twig' %}
             </section>

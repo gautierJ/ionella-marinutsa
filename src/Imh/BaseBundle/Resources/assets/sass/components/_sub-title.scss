@@ -1,14 +1,14 @@
 .c-sub-title {
-  font-family: EthosRegularItalic, serif;
-  font-size: $base-font-size-large;
-  color: $color-grey-dark;
-  margin-bottom: 0;
-  letter-spacing: 0.04em;
+    font-family: EthosRegularItalic, serif;
+    font-size: $base-font-size-large;
+    color: $color-grey-dark;
+    margin-bottom: 0;
+    letter-spacing: 0.04em;
 }
 
 @media (min-width: $screen-sm-min) {
 
-  .c-sub-title {
-    font-size: $base-font-size-large;
-  }
+    .c-sub-title {
+        font-size: $base-font-size-large;
+    }
 }

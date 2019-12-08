@@ -1,87 +1,84 @@
 .c-picture-block {
-  @include clearfix();
-  margin-top: 0;
-  text-align: center;
+    @include clearfix();
+    margin-top: 0;
+    text-align: center;
 }
 
 .c-picture-block__element {
-  padding: 3rem 1.5rem 0 1.5rem;
-  min-height: inherit;
+    padding: 3rem 1.5rem 0 1.5rem;
+    min-height: inherit;
 
-  &:nth-child(odd) {
-    background-color: $color-grey-ultralight;
-  }
+    &:nth-child(odd) {
+        background-color: $color-grey-ultralight;
+    }
 }
 
 .c-picture-block__media-container {
-  @include box-shadow(0, 0, 0.9rem, 0.1rem, $color-grey-light);
-  border-radius: 50%;
-  border: 0.6rem solid white;
-  display: inline-block;
-  width: 15rem;
-  height: 15rem;
+    @include box-shadow(0, 0, 0.9rem, 0.1rem, $color-grey-light);
+    border-radius: 50%;
+    border: 0.6rem solid white;
+    display: inline-block;
+    width: 15rem;
+    height: 15rem;
 }
 
 .c-picture-block__life {
-  margin-bottom: 0;
-  font-size: $base-font-size-large;
+    margin-bottom: 0;
+    font-size: $base-font-size-small;
 }
 
 .c-picture-block__work {
-  font-family: 'ethos_regular', sans-serif;
-  font-size: $base-font-size-x-large;
-  text-transform: uppercase;
-  line-height: 23px;
+    font-family: 'ethos_regular', sans-serif;
+    font-size: $base-font-size-x-large;
+    text-transform: uppercase;
+    line-height: 2.3rem;
 }
 
 .c-picture-block__description {
-  padding: 2rem 0 3rem;
+    padding: 2rem 0 3rem;
 }
 
 .c-picture-block__description--last {
-  border-bottom: 0;
-  margin-bottom: 0;
+    border-bottom: 0;
+    margin-bottom: 0;
 }
 
 .c-picture-block__arrangement {
-  font-style: italic;
-  font-size: $base-font-size-large;
+    font-style: italic;
+    font-size: $base-font-size-small;
 }
 
 .c-picture-block__duration {
-  font-style: italic;
-  font-size: $base-font-size-large;
+    font-style: italic;
+    font-size: $base-font-size-x-small;
 }
-
-// Media queries
-// ==================================================
 
 @media (min-width: $screen-sm-min) {
 
-  .imh-container--wrapper {
-    padding: 2.6rem 6rem 6.2rem;
-  }
-
-  .c-picture-block {
-    margin-top: 50px;
-    font-size: $fourteenpx;
-  }
-
-  .c-picture-block__element {
-    padding-top: 0;
-    min-height: 24rem;
-
-    &:nth-child(odd) {
-      background-color: inherit;
+    .imh-container--wrapper {
+        padding: 0 6rem;
     }
-  }
 
-  .c-picture-block__work {
-    font-size: $elevenpx;
-  }
+    .c-picture-block {
+        margin-top: 50px;
+        font-size: $fourteenpx;
+    }
 
-  .c-picture-block__description {
-    padding: 0;
-    font-size: inherit;
-  }
+    .c-picture-block__element {
+        padding-top: 0;
+        min-height: 24rem;
+
+        &:nth-child(odd) {
+            background-color: inherit;
+        }
+    }
+
+    .c-picture-block__work {
+        font-size: $base-font-size-small;
+    }
+
+    .c-picture-block__description {
+        padding: 0;
+        font-size: inherit;
+    }
 }

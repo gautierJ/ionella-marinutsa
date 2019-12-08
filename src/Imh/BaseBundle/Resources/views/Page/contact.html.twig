@@ -29,14 +29,12 @@
         <section class="imh-container--wrapper imh-container--shadows">
             <div class="row">
                 <div class="col-xs-24">
-                    <div class="hidden-md hidden-lg">
-                        <div class="o-vertical-interval-medium">
-                            {% embed 'ImhBaseBundle:Components:title-secondary.html.twig' %}
-                                {% block title %}
-                                    {{- 'imh.base.contact.main_section-title'|trans -}}
-                                {% endblock %}
-                            {% endembed %}
-                        </div>
+                    <div class="o-vertical-interval-large">
+                        {% embed 'ImhBaseBundle:Components:title-secondary.html.twig' %}
+                            {% block title %}
+                                {{- 'imh.base.contact.main_section-title'|trans -}}
+                            {% endblock %}
+                        {% endembed %}
                     </div>
                     <div class="o-vertical-interval-top-medium">
                         {% embed 'ImhBaseBundle:Components:sub-title.html.twig' %}
