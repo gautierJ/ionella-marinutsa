@@ -112,6 +112,10 @@
         $(function () {
             'use strict';
 
+            if (Modernizr.touchevents) {
+                $("[data-menumobile]").data("plugin_imhMenuMobile").makeMenuVisible(); // Call public plugin method
+            }
+
             $('#content').contentHeightAdjust();
 
             /* Flashbag Popin */
@@ -119,6 +123,7 @@
                 $close   = $('.close');
 
             $('.' + flashbag).fadeIn(600);
+
             $close.on('click', function(e) {
                 $(this).parents('.' + flashbag).fadeOut(400);
                 e.preventDefault();

@@ -219,6 +219,8 @@
 
             if (!Modernizr.touchevents) {
                 $('.navigation-menu').scrollMove(); // Menu plugin
+            } else {
+                $("[data-menumobile]").data("plugin_imhMenuMobile").makeMenuVisible(); // Call public plugin method
             }
 
             $.ajax({

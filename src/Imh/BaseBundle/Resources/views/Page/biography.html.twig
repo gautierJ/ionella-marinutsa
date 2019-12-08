@@ -152,6 +152,7 @@
                 $('[data-sidebar]').scrollMove(); // Menu plugin
             } else {
                 $sT.removeClass(cssClosed).trigger('click').off(); // Open prizes menu on mobile / tablet
+                $("[data-menumobile]").data("plugin_imhMenuMobile").makeMenuVisible(); // Call public plugin method
             }
 
             if (Modernizr.mq('(min-width: 768px)')) { //

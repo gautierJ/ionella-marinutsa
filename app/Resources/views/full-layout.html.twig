@@ -62,17 +62,16 @@
 
         {% block javascripts %}
 
-            <!-- Google Analytics -->
+            {# Google Analytics #}
             <script>
                 window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
                 ga('create', 'UA-64577170-1', 'auto');
                 ga('send', 'pageview');
             </script>
             <script async src='https://www.google-analytics.com/analytics.js'></script>
-            <!-- End Google Analytics -->
 
+            {# Picture element HTML5 shiv #}
             <script>
-                // Picture element HTML5 shiv
                 document.createElement('picture');
             </script>
 
@@ -93,7 +92,7 @@
                 <script src="{{ asset_url }}"></script>
             {% endjavascripts %}
 
-            {#FOSJsRoutingBundle#}
+            {# FOSJsRoutingBundle #}
             <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
             <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
 
