@@ -1,0 +1,135 @@
+.c-menu {}
+
+.c-menu__item {
+    display: block;
+    margin: 0 0 7px;
+
+    &.current {
+        .c-menu__link,
+        .c-menu__label {
+            color: white;
+            border: 1px solid $color-grey-dark;
+            background: black;
+        }
+    }
+}
+
+.c-menu__link,
+.c-menu__label {
+    display: inline-block;
+    color: white;
+    font-size: $fourteenpx;
+    padding: 0 20px;
+    text-transform: uppercase;
+    height: 50px;
+    line-height: 50px;
+    max-width: 150px;
+    width: 100%;
+}
+
+.c-menu__link {
+    border: 1px solid rgba(0, 0, 0, 0);
+
+    &:hover {
+        background-color: white;
+        color: $color-grey-darker;
+    }
+}
+
+.c-menu__level-1 {
+    position: absolute;
+}
+
+
+@media (min-width: $screen-md-min) {
+
+    .c-menu__item {
+        display: inline-block;
+        position: relative;
+        top: -1px;
+        margin: 0 -1px -2px 0;
+        height: 64px;
+        z-index: 1;
+
+        &.current {
+            background-color: white;
+            border: 1px solid $color-grey-darker;
+            border-bottom: none;
+
+            .c-menu__link {
+                border: none;
+                background: none;
+            }
+
+            .c-menu__link,
+            .c-menu__label {
+                color: $color-grey-darker;
+            }
+        }
+    }
+
+    .c-menu__link,
+    .c-menu__label {
+        max-width: inherit;
+        width: auto;
+        line-height: 64px;
+        display: block;
+    }
+
+    .c-menu__link {
+        height: 64px;
+        @include transition(all, 0.2s, ease-in, 0s);
+
+        &:hover {
+            border: 1px solid $color-grey-darker;
+        }
+    }
+
+    .c-menu__label {
+        height: 62px;
+    }
+}
+
+
+
+
+.imh__navigation-main {
+    @include make-row();
+    border-top: 1px solid $color-grey-darker;
+    border-bottom: 1px solid $color-grey-darker;
+    background: $color-grey-darker;
+    text-align: center;
+}
+
+
+.imh__navigation {
+    touch-action: none;
+    background: url("/bundles/imhbase/images/header-bg.png") repeat rgba(255, 208, 247, 0.04);
+    border-bottom: 1px solid $color-grey-light;
+    border-top: 1px solid white;
+    height: 126px;
+
+    .imh-container {
+        top: 27px;
+        margin: 0 auto;
+        z-index: 2;
+    }
+
+    .fa {
+        position: relative;
+        top: -2px;
+        vertical-align: middle;
+
+        & + span {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: $screen-sm-max) {
+
+    .imh__navigation-main {
+        background: none;
+        border: none;
+    }
+}

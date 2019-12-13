@@ -54,7 +54,13 @@ class MenuBuilder extends ContainerAware
                 'route' => 'imh_base_homepage',
                 'attributes' => array(
                     'class' => 'c-menu__item',
-                    'data-icon' => 'fa fa-home fa-2x',
+                    'data-icon' => 'c-menu__icon fa fa-home fa-2x',
+                ),
+                'linkAttributes' => array(
+                    'class' => 'c-menu__link',
+                ),
+                'labelAttributes' => array(
+                    'class' => 'c-menu__label',
                 )
             )
         )->setExtra(
@@ -68,6 +74,12 @@ class MenuBuilder extends ContainerAware
                 'route' => 'imh_base_biography',
                 'attributes' => array(
                     'class' => 'c-menu__item',
+                ),
+                'linkAttributes' => array(
+                    'class' => 'c-menu__link',
+                ),
+                'labelAttributes' => array(
+                    'class' => 'c-menu__label',
                 )
             )
         )->setExtra(
@@ -81,6 +93,12 @@ class MenuBuilder extends ContainerAware
                 'route' => 'imh_base_repertoire',
                 'attributes' => array(
                     'class' => 'c-menu__item',
+                ),
+                'linkAttributes' => array(
+                    'class' => 'c-menu__link',
+                ),
+                'labelAttributes' => array(
+                    'class' => 'c-menu__label',
                 )
             )
         )->setExtra(
@@ -93,6 +111,12 @@ class MenuBuilder extends ContainerAware
             array(
                 'attributes' => array(
                     'class' => 'c-menu__item',
+                ),
+                'linkAttributes' => array(
+                    'class' => 'c-menu__link',
+                ),
+                'labelAttributes' => array(
+                    'class' => 'c-menu__label',
                 )
             )
         )->setExtra(
@@ -104,6 +128,9 @@ class MenuBuilder extends ContainerAware
             'imh.base.menu.discography.cd',
             array(
                 'route' => 'imh_base_cd',
+                'attributes' => array(
+                    'class' => 'c-menu__item c-menu__item--level-1',
+                ),
             )
         )->setExtra(
             'translation_domain',
@@ -114,6 +141,9 @@ class MenuBuilder extends ContainerAware
             'imh.base.menu.discography.sponsor',
             array(
                 'route' => 'imh_base_sponsor',
+                'attributes' => array(
+                    'class' => 'c-menu__item c-menu__item--level-1',
+                ),
             )
         )->setExtra(
             'translation_domain',
@@ -141,6 +171,12 @@ class MenuBuilder extends ContainerAware
                 'routeParameters' => array('id' => $results[0]['id']), // Shows first gallery
                 'attributes' => array(
                     'class' => 'c-menu__item',
+                ),
+                'linkAttributes' => array(
+                    'class' => 'c-menu__link',
+                ),
+                'labelAttributes' => array(
+                    'class' => 'c-menu__label',
                 )
             ))->setExtra('translation_domain', 'messages');
         }
@@ -171,6 +207,12 @@ class MenuBuilder extends ContainerAware
             'routeParameters' => array('id' => $results2[0]['id']), // Shows first video
             'attributes' => array(
                 'class' => 'c-menu__item',
+            ),
+            'linkAttributes' => array(
+                'class' => 'c-menu__link',
+            ),
+            'labelAttributes' => array(
+                'class' => 'c-menu__label',
             )
         ))->setExtra('translation_domain', 'messages');
 
@@ -188,6 +230,12 @@ class MenuBuilder extends ContainerAware
                 'route' => 'imh_base_contact',
                 'attributes' => array(
                     'class' => 'c-menu__item',
+                ),
+                'linkAttributes' => array(
+                    'class' => 'c-menu__link',
+                ),
+                'labelAttributes' => array(
+                    'class' => 'c-menu__label',
                 )
             )
         )->setExtra(

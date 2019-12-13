@@ -2,91 +2,8 @@
   @include make-row();
 }
 
-.imh__navigation {
-  touch-action: none;
-  background: url("/bundles/imhbase/images/header-bg.png") repeat rgba(255, 208, 247, 0.04);
-  border-bottom: 1px solid $color-grey-light;
-  border-top: 1px solid white;
-  height: 126px;
-
-  .imh-container {
-    top: 27px;
-    margin: 0 auto;
-    z-index: 2;
-  }
-
-  .fa {
-    position: relative;
-    top: -2px;
-    vertical-align: middle;
-
-    & + span {
-      display: none;
-    }
-  }
-}
-
-.imh__navigation-main {
-  @include make-row();
-  border-top: 1px solid $color-grey-darker;
-  border-bottom: 1px solid $color-grey-darker;
-  background: $color-grey-darker;
-  text-align: center;
-
-  li {
-    display: inline-block;
-    position: relative;
-    top: -1px;
-    margin: 0 -1px -2px 0;
-    height: 64px;
-    z-index: 1;
-
-    a, span {
-      color: white;
-      font-size: $fourteenpx;
-      display: block;
-      padding: 0 20px;
-      text-transform: uppercase;
-      line-height: 64px;
-    }
-
-    span {
-      height: 62px;
-    }
-
-    a {
-      border: 1px solid rgba(0, 0, 0, 0);
-      @include transition(all, 0.1s, ease-in, 0s);
-      height: 64px;
-
-      &:hover {
-        background-color: white;
-        color: $color-grey-darker;
-        border: 1px solid $color-grey-darker;
-      }
-    }
-
-    &.current {
-      background-color: white;
-      border: 1px solid $color-grey-darker;
-      border-bottom: none;
-
-      a {
-        border: none;
-      }
-
-      a, span {
-        color: $color-grey-darker;
-        border-bottom-color: white;
-      }
-    }
-  }
-}
-
 .globe, .audio, .hamburger { display: none; }
 
-// Media queries
-// ==================================================
 
 @media (max-width: $screen-sm-max) {
   .imh__navigation {
@@ -120,43 +37,6 @@
 
   .imh-container {
     top: 0;
-  }
-
-  .imh__navigation-main {
-    background: none;
-    border: none;
-
-    li {
-      display: block;
-      top: 0;
-      position: static;
-      height: inherit;
-      z-index: inherit;
-      margin: 0 0 7px;
-
-      &.current {
-        border: none;
-        background: none;
-        a, span {
-          color: white;
-          border: 1px solid $color-grey-dark;
-          background: black;
-        }
-      }
-
-      a {
-        transition: none;
-        &:hover { border: none; }
-      }
-
-      a, span {
-        display: inline-block;
-        height: 50px;
-        line-height: 50px;
-        max-width: 150px;
-        width: 100%;
-      }
-    }
   }
 
   .globe {
