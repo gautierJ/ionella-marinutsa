@@ -6,8 +6,12 @@ imh:
       home:           'Главная'
       biography:      'Биография'
       repertoire:     'Репертуар'
+      discography:
+        title:        'дискография'
+        cd:           'компакт-диск'
+        sponsor:      'попечителям'
       gallery:        'Галерея'
-      video:          'Видео'
+      media:          'диск'
       contact:        'Контакты'
 
     menu_lang:

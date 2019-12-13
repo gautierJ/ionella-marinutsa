@@ -6,6 +6,14 @@ imh_base_repertoire:
     path:     /repertoire
     defaults: { _controller: ImhBaseBundle:Page:repertoire }
 
+imh_base_cd:
+    path:     /cd
+    defaults: { _controller: ImhBaseBundle:Page:cd }
+
+imh_base_sponsor:
+    path:     /sponsor
+    defaults: { _controller: ImhBaseBundle:Page:sponsor }
+
 imh_base_contact:
     path:     /contact
     defaults: { _controller: ImhBaseBundle:Contact:index }

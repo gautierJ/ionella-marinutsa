@@ -42,12 +42,83 @@ class MenuBuilder extends ContainerAware
 
     public function createMainMenu(Request $request)
     {
-        $menu = $this->factory->createItem('root');
+        $menu = $this->factory->createItem('root', array(
+            'childrenAttributes' => array(
+                'class' => 'c-menu',
+            )
+        ));
 
-        $menu->addChild('imh.base.menu.home', array('route' => 'imh_base_homepage'))->setExtra('translation_domain', 'messages')->setAttribute('data-icon', 'fa fa-home fa-2x');
-        $menu->addChild('imh.base.menu.biography', array('route' => 'imh_base_biography'))->setExtra('translation_domain', 'messages');
-//        $menu->addChild('Events', array('route' => 'imh_base_events'));
-        $menu->addChild('imh.base.menu.repertoire', array('route' => 'imh_base_repertoire'))->setExtra('translation_domain', 'messages');
+        $menu->addChild(
+            'imh.base.menu.home',
+            array(
+                'route' => 'imh_base_homepage',
+                'attributes' => array(
+                    'class' => 'c-menu__item',
+                    'data-icon' => 'fa fa-home fa-2x',
+                )
+            )
+        )->setExtra(
+            'translation_domain',
+            'messages'
+        );
+
+        $menu->addChild(
+            'imh.base.menu.biography',
+            array(
+                'route' => 'imh_base_biography',
+                'attributes' => array(
+                    'class' => 'c-menu__item',
+                )
+            )
+        )->setExtra(
+            'translation_domain',
+            'messages'
+        );
+
+        $menu->addChild(
+            'imh.base.menu.repertoire',
+            array(
+                'route' => 'imh_base_repertoire',
+                'attributes' => array(
+                    'class' => 'c-menu__item',
+                )
+            )
+        )->setExtra(
+            'translation_domain',
+            'messages'
+        );
+
+        $discography = $menu->addChild(
+            'imh.base.menu.discography.title',
+            array(
+                'attributes' => array(
+                    'class' => 'c-menu__item',
+                )
+            )
+        )->setExtra(
+            'translation_domain',
+            'messages'
+        );
+
+        $discography->addChild(
+            'imh.base.menu.discography.cd',
+            array(
+                'route' => 'imh_base_cd',
+            )
+        )->setExtra(
+            'translation_domain',
+            'messages'
+        );;
+
+        $discography->addChild(
+            'imh.base.menu.discography.sponsor',
+            array(
+                'route' => 'imh_base_sponsor',
+            )
+        )->setExtra(
+            'translation_domain',
+            'messages'
+        );;
 
         // Builder class extends ContainerAware class so we can access EntityManager
         $em = $this->container->get('doctrine.orm.entity_manager');
@@ -67,7 +138,10 @@ class MenuBuilder extends ContainerAware
         if(!empty($errors)) { // if there is a gallery we show the menu
             $menu->addChild('imh.base.menu.gallery', array(
                 'route' => 'sonata_media_gallery_view',
-                'routeParameters' => array('id' => $results[0]['id']) // Shows first gallery
+                'routeParameters' => array('id' => $results[0]['id']), // Shows first gallery
+                'attributes' => array(
+                    'class' => 'c-menu__item',
+                )
             ))->setExtra('translation_domain', 'messages');
         }
 
@@ -92,20 +166,34 @@ class MenuBuilder extends ContainerAware
         $statement2->execute();
         $results2 = $statement2->fetchAll();
 
-        $menu->addChild('imh.base.menu.video', array(
+        $menu->addChild('imh.base.menu.media', array(
             'route' => 'sonata_media_view',
-            'routeParameters' => array('id' => $results2[0]['id']) // Shows first video
+            'routeParameters' => array('id' => $results2[0]['id']), // Shows first video
+            'attributes' => array(
+                'class' => 'c-menu__item',
+            )
         ))->setExtra('translation_domain', 'messages');
 
         if($routeName === "sonata_media_view") {
             foreach ($results2 as $result) {
                 if($result['id'] === $request_id) {
-                    $menu['imh.base.menu.video']->setCurrent(true);
+                    $menu['imh.base.menu.media']->setCurrent(true);
                 }
             }
         }
 
-        $menu->addChild('imh.base.menu.contact', array('route' => 'imh_base_contact'))->setExtra('translation_domain', 'messages');
+        $menu->addChild(
+            'imh.base.menu.contact',
+            array(
+                'route' => 'imh_base_contact',
+                'attributes' => array(
+                    'class' => 'c-menu__item',
+                )
+            )
+        )->setExtra(
+            'translation_domain',
+            'messages'
+        );
 
         return $menu;
     }
@@ -119,7 +207,9 @@ class MenuBuilder extends ContainerAware
         $menu = $this->factory->createItem('root');
 
         $menu->addChild('_gallery', array(
-            'label' => $this->engine->render('ApplicationSonataMediaBundle:Gallery:index.html.twig', array(
+            'label' => $this->engine->render(
+                'ApplicationSonataMediaBundle:Gallery:index.html.twig',
+                array(
                     'galleries' => $galleries
                 )),
             'extras' => array('safe_label' => true)

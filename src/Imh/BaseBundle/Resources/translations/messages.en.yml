@@ -6,8 +6,12 @@ imh:
       home:         'Home'
       biography:    'Biography'
       repertoire:   'Repertoire'
+      discography:
+        title:      'Discography'
+        cd:         'CD-ROM'
+        sponsor:    'Our sponsors'
       gallery:      'Gallery'
-      video:        'Videos'
+      media:        'Media'
       contact:      'Contact'
 
     menu_lang:

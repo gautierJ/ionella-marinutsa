@@ -49,4 +49,18 @@ class PageController extends Controller
             'isTouchDevice' => $this->detectDevice()[0]
         ));
     }
+
+    public function cdAction()
+    {
+        return $this->render('ImhBaseBundle:Page:cd.html.twig', array(
+            'isTouchDevice' => $this->detectDevice()[0]
+        ));
+    }
+
+    public function sponsorAction()
+    {
+        return $this->render('ImhBaseBundle:Page:sponsor.html.twig', array(
+            'isTouchDevice' => $this->detectDevice()[0]
+        ));
+    }
 }
