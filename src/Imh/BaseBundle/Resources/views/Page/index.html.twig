@@ -50,13 +50,14 @@
                 <div class="imh-events">
                     <div class="col-sm-12 col-sm-offset-6 text-center">
                         {% embed 'ImhBaseBundle:Components:title-secondary.html.twig' with {
+                            'titleSecondary': {'modifierClasses': 'c-title-secondary--big@sm-min'},
                             'titleSecondaryInside': {'modifierClasses': 'c-title-secondary__inside--ultralight'}
                         }%}
                             {% block title %}
                                 {{- ('imh.base.home.events.title')|trans -}}
                             {% endblock %}
                         {% endembed %}
-                        <div class="o-vertical-interval-top o-vertical-interval-top-medium@xs-max">
+                        <div class="o-vertical-interval-top-medium">
                             {% embed 'ImhBaseBundle:Components:sub-title.html.twig' %}
                                 {% block sub_title %}
                                     {{- ('imh.base.home.events.sub_title')|trans|raw -}}
