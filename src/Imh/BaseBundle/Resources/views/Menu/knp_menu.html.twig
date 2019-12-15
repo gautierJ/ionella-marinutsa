@@ -45,9 +45,11 @@
     {% if options.matchingDepth is not none and options.matchingDepth > 0 %}
         {% set options = options|merge({'matchingDepth': currentOptions.matchingDepth - 1}) %}
     {% endif %}
+    {% spaceless %}
     {% for item in currentItem.children %}
         {{ block('item') }}
     {% endfor %}
+    {% endspaceless %}
     {# restore current variables #}
     {% set item = currentItem %}
     {% set options = currentOptions %}

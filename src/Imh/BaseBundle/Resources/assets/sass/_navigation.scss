@@ -1,119 +1,119 @@
 .imh-header {
-  @include make-row();
+    @include make-row();
 }
 
 .globe, .audio, .hamburger { display: none; }
 
 
 @media (max-width: $screen-sm-max) {
-  .imh__navigation {
-    background: rgb(0, 0, 0) !important;
-    background: rgba(0, 0, 0, .95) !important;
-    position: fixed;
-    display: table;
-    top: 0;
-    left: 0;
-    height: 100% !important;
-    width: 100%;
-    margin-top: 59px;
-    z-index: 2;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.5s ease-in, visibility 0.5s ease-in;
+    .imh__navigation {
+        background: rgb(0, 0, 0) !important;
+        background: rgba(0, 0, 0, .95) !important;
+        position: fixed;
+        display: table;
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        width: 100%;
+        margin-top: 59px;
+        z-index: 2;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s ease-in, visibility 0.5s ease-in;
 
-    &.is-visible {
-      opacity: 1;
-      visibility: visible;
-      z-index: 3;
-      /*& + .hamburger-wrapper { border-bottom: 1px solid $color-grey-dark; }*/
+        &.is-visible {
+            opacity: 1;
+            visibility: visible;
+            z-index: 3;
+            /*& + .hamburger-wrapper { border-bottom: 1px solid $color-grey-dark; }*/
+        }
+
+        .imh-container {
+            top: -30px;
+            display: table-cell;
+            vertical-align: middle;
+        }
     }
 
     .imh-container {
-      top: -30px;
-      display: table-cell;
-      vertical-align: middle;
+        top: 0;
     }
-  }
 
-  .imh-container {
-    top: 0;
-  }
+    .globe {
+        padding: 12px 15px;
+        display: inline-block;
+        vertical-align: middle;
+        border: none;
+        background: none;
 
-  .globe {
-    padding: 12px 15px;
-    display: inline-block;
-    vertical-align: middle;
-    border: none;
-    background: none;
-
-    .fa {
-      vertical-align: middle;
+        .fa {
+            vertical-align: middle;
+        }
     }
-  }
 
-  .audio {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  .audio--play {
-    display: none;
-  }
-
-  .hamburger-wrapper {
-    background: black;
-    background: rgba(0, 0, 0, .97);
-    border-bottom: 1px solid $color-grey-darker;
-    position: fixed;
-    width: 100%;
-    height: 60px;
-    z-index: 3;
-    top: -60px;
-    left: 0;
-    transition: top 0.7s cubic-bezier(0, 0.92, 0.08, 1) 0.2s, opacity 1s linear 0s;
-    opacity: 0;
-  }
-
-  .hamburger-wrapper.is-visible {
-    opacity: 1;
-    top: 0;
-  }
-
-  .hamburger-wrapper.has-no-transition {
-    transition: none;
-  }
-
-  .hamburger {
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: inline-block;
-    padding: 18px 15px;
-
-    &:hover {
-      opacity: 1;
+    .audio {
+        display: inline-block;
+        vertical-align: middle;
     }
-  }
 
-  .hamburger-label {
-    font-family: "ralewaysemibold", Arial, Helvetica, sans-serif;
-    display: inline-block;
-    vertical-align: middle;
-    color: white;
-    margin: 1px 7px 0 7px;
-    font-size: 11px;
-    letter-spacing: 0.1em;
-  }
+    .audio--play {
+        display: none;
+    }
 
-  .hamburger-box {
-    width: 35px;
-    vertical-align: middle;
-  }
+    .hamburger-wrapper {
+        background: black;
+        background: rgba(0, 0, 0, .97);
+        border-bottom: 1px solid $color-grey-darker;
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        z-index: 3;
+        top: -60px;
+        left: 0;
+        transition: top 0.7s cubic-bezier(0, 0.92, 0.08, 1) 0.2s, opacity 1s linear 0s;
+        opacity: 0;
+    }
 
-  .hamburger-inner,
-  .hamburger-inner:before,
-  .hamburger-inner:after {
-    border-radius: 0;
-    width: 35px;
-  }
+    .hamburger-wrapper.is-visible {
+        opacity: 1;
+        top: 0;
+    }
+
+    .hamburger-wrapper.has-no-transition {
+        transition: none;
+    }
+
+    .hamburger {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: inline-block;
+        padding: 18px 15px;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .hamburger-label {
+        font-family: "ralewaysemibold", Arial, Helvetica, sans-serif;
+        display: inline-block;
+        vertical-align: middle;
+        color: white;
+        margin: 1px 7px 0 7px;
+        font-size: 11px;
+        letter-spacing: 0.1em;
+    }
+
+    .hamburger-box {
+        width: 35px;
+        vertical-align: middle;
+    }
+
+    .hamburger-inner,
+    .hamburger-inner:before,
+    .hamburger-inner:after {
+        border-radius: 0;
+        width: 35px;
+    }
 }

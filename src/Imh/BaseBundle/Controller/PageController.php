@@ -50,6 +50,13 @@ class PageController extends Controller
         ));
     }
 
+    public function discographyAction()
+    {
+        return $this->render('ImhBaseBundle:Page:discography.html.twig', array(
+            'isTouchDevice' => $this->detectDevice()[0]
+        ));
+    }
+
     public function cdAction()
     {
         return $this->render('ImhBaseBundle:Page:cd.html.twig', array(

@@ -1,0 +1,68 @@
+{% extends 'ImhBaseBundle::layout.html.twig' %}
+
+{% block title %}{{ 'imh.base.biography.page_title'|trans }}{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('/assets/lib/owl-carousel/owl.carousel.css') }}" type="text/css" />
+
+    {% stylesheets output='assets/compiled/css/discography.css' filter='compass, cssrewrite'
+        '@ImhBaseBundle/Resources/assets/sass/page/discography.scss'
+    %}
+    <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
+    {% endstylesheets %}
+{% endblock %}
+
+{% block main %}
+
+    {#<img class="imh__bkg-image lazy" data-original="{{ asset('bundles/imhbase/images/strings.jpg') }}" alt="" />
+    <noscript><img src="{{ asset('bundles/imhbase/images/strings.jpg') }}" alt="Harp strings"></noscript>#}
+
+    <div class="container imh-container">
+        <div class="imh-container--wrapper imh-container--shadows">
+            <section class="imh__section imh__biography">
+                {% spaceless %}
+
+                        <div class="o-vertical-interval-large">
+                            {% embed 'ImhBaseBundle:Components:title-secondary.html.twig' %}
+                                {% block title %}
+                                    {{- 'imh.base.discography.main_section-title'|trans -}}
+                                {% endblock %}
+                            {% endembed %}
+                        </div>
+
+
+
+                {% endspaceless %}
+            </section>
+            <section class="imh__section imh__prizes is-closed" data-prizes>
+                <div class="col-xs-24">
+                    <h2 class="imh__prizes-slider-title" data-prizes-title>{{ 'imh.base.biography.prizes.title'|trans }}</h2>
+                    <ul class="imh__prizes-slider-content" data-prizes-content>
+                        {{ 'imh.base.biography.prizes.list'|trans|raw }}
+                    </ul>
+                </div>
+            </section>
+            <section class="imh__section imh__download hidden-xs">
+                <div class="col-xs-24">
+                    <h2 class="imh__prizes-slider-title visible-xs">{{ 'imh.base.biography.download'|trans }}</h2>
+                </div>
+                {#<div class="col-xs-24">
+                    <div class="imh__download-button">
+                        #}{#<a class="bio" href="{{ path('sonata_media_download', {'id': media|sonata_urlsafeid }) }}"><img class="empty" src="{{ asset('bundles/imhbase/images/empty.gif') }}" alt="" /></a>#}{#
+                        <a href="" class="imh__download-link" title="{{ 'imh.base.biography.download'|trans }}">
+                            <svg class="icon icon--download"><use xlink:href="#svg-download"></use></svg>
+                        </a>
+                    </div>
+                </div>#}
+            </section>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+
+
+
+{% endblock %}

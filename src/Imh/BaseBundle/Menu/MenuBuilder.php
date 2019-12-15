@@ -53,8 +53,8 @@ class MenuBuilder extends ContainerAware
             array(
                 'route' => 'imh_base_homepage',
                 'attributes' => array(
-                    'class' => 'c-menu__item',
-                    'data-icon' => 'c-menu__icon fa fa-home fa-2x',
+                    'class' => 'c-menu__item c-icon',
+                    'data-icon' => 'fa fa-home fa-2x',
                 ),
                 'linkAttributes' => array(
                     'class' => 'c-menu__link',
@@ -109,8 +109,9 @@ class MenuBuilder extends ContainerAware
         $discography = $menu->addChild(
             'imh.base.menu.discography.title',
             array(
+                'route' => 'imh_base_discography',
                 'attributes' => array(
-                    'class' => 'c-menu__item',
+                    'class' => 'c-menu__item c-menu__item--trigger',
                 ),
                 'linkAttributes' => array(
                     'class' => 'c-menu__link',
@@ -131,6 +132,12 @@ class MenuBuilder extends ContainerAware
                 'attributes' => array(
                     'class' => 'c-menu__item c-menu__item--level-1',
                 ),
+                'linkAttributes' => array(
+                    'class' => 'c-menu__link c-menu__link--level-1',
+                ),
+                'labelAttributes' => array(
+                    'class' => 'c-menu__label c-menu__label--level-1',
+                )
             )
         )->setExtra(
             'translation_domain',
@@ -144,6 +151,12 @@ class MenuBuilder extends ContainerAware
                 'attributes' => array(
                     'class' => 'c-menu__item c-menu__item--level-1',
                 ),
+                'linkAttributes' => array(
+                    'class' => 'c-menu__link c-menu__link--level-1',
+                ),
+                'labelAttributes' => array(
+                    'class' => 'c-menu__label c-menu__label--level-1',
+                )
             )
         )->setExtra(
             'translation_domain',

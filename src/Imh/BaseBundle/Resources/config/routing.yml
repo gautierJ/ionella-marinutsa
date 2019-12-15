@@ -6,6 +6,10 @@ imh_base_repertoire:
     path:     /repertoire
     defaults: { _controller: ImhBaseBundle:Page:repertoire }
 
+imh_base_discography:
+    path:     /discography
+    defaults: { _controller: ImhBaseBundle:Page:discography }
+
 imh_base_cd:
     path:     /cd
     defaults: { _controller: ImhBaseBundle:Page:cd }

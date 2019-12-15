@@ -48,7 +48,7 @@
 .imh-container--shadows:before {
   content: '';
   position: absolute;
-  top: -97px;
+  top: -65px;
   width: 5px;
   height: 400px;
   z-index: -10;
@@ -104,10 +104,6 @@
 // ==================================================
 
 @media (min-width: $screen-sm-min) {
-
-  .imh-container--wrapper {
-    border-top: 34px solid white;
-  }
 
   .imh-content {
     padding-top: 0;

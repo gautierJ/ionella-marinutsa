@@ -81,7 +81,7 @@
 
                 {% endspaceless %}
             </section>
-            <section class="imh__section imh__prizes closed" data-prizes>
+            <section class="imh__section imh__prizes is-closed" data-prizes>
                 <div class="col-xs-24">
                     <h2 class="imh__prizes-slider-title" data-prizes-title>{{ 'imh.base.biography.prizes.title'|trans }}</h2>
                     <ul class="imh__prizes-slider-content" data-prizes-content>
@@ -143,7 +143,7 @@
                 $sC          = $('[data-prizes-content]'),
                 h            = $sC.height(),
                 cssReady     = 'ready',
-                cssClosed    = 'closed',
+                cssClosed    = 'is-closed',
                 isVisible    = false,
                 sly;
 
