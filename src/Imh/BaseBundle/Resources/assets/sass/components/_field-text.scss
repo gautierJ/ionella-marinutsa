@@ -1,14 +1,14 @@
 .c-field-text {
-  font-size: $fourteenpx;
-  background-color: $color-grey-extremlight;
-  color: $color-grey-dark;
-  border: 1px solid $color-grey-lighter;
-  padding: 1.2rem;
-  transition: border 0.2s ease-in, box-shadow 0.2s ease-in;
-  width: 100%;
+    font-size: $fourteenpx;
+    background-color: $color-grey-extremlight;
+    color: $color-grey-dark;
+    border: 1px solid $color-grey-lighter;
+    padding: 1.2rem;
+    transition: border 0.2s ease-in, box-shadow 0.2s ease-in;
+    width: 100%;
 
-  &:focus {
-    border-color: $color-grey-darker;
-    outline: none;
-  }
+    &:focus {
+        border-color: $color-grey-darker;
+        outline: none;
+    }
 }
