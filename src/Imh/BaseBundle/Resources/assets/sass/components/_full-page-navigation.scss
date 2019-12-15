@@ -1,0 +1,121 @@
+// Fullpage plugin override
+// ==================================================
+
+/*@include keyframes(imh-in) {
+    from { height: 0; }
+    to { height: 100%; }
+}
+
+@include keyframes(imh-out) {
+    from { height: 0; }
+    to { height: 100%; }
+}*/
+
+#fp-nav {
+    display: none;
+}
+
+@media (min-width: $screen-md-min) {
+
+    #fp-nav {
+        display: block;
+        top: 0;
+        margin-top: 0 !important;
+        height: 100vh;
+        width: 1.5rem;
+        background-color: black;
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 0.1rem;
+    }
+
+    #fp-nav.right {
+        right: 0;
+    }
+
+    #fp-nav ul {
+        height: 100%;
+    }
+
+    #fp-nav ul li {
+        margin: 0;
+        height: 33%;
+        width: 100%;
+    }
+
+    #fp-nav ul li {
+
+        a span,
+        a.active span {
+            margin: 0;
+            border-radius: 0;
+            display: block;
+            position: static;
+            height: 0;
+            width: 100%;
+        }
+
+        a span {
+            background: none;
+            @include transition(height, 0.4s, ease-in-out, 0s);
+        }
+
+        a.active span {
+            background-color: black;
+            background-color: rgba(0, 0, 0, 0.9);
+            height: 100%;
+        }
+
+        &:hover {
+            a span {
+                margin: 0;
+                @include size(100%, 100%);
+            }
+
+            a.active span {
+                margin: 0;
+                @include size(100%, 100%);
+                border-radius: 0;
+            }
+
+            a:not(.active) + .fp-tooltip {
+                opacity: 0.3;
+            }
+
+            a:not(.active) span {
+                background-color: white;
+            }
+        }
+
+        .fp-tooltip {
+            top: 50%;
+            padding: 0.9rem 2rem;
+            margin-top: -2.1rem;
+            font-family: Knockout, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: $base-font-size-large;
+            background-color: black;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: visible;
+            backface-visibility: initial;
+
+            &:after {
+                content: "";
+                position: absolute;
+                display : inline-block;
+                height : 0;
+                width : 0;
+                border-style: solid;
+                border-width: 0.4rem 0 0.4rem 0.5rem;
+                border-color: transparent transparent transparent rgba(0, 0, 0, 0.9);
+                right: -0.5rem;
+                top: 50%;
+                margin-top: -0.4rem;
+            }
+        }
+
+        .fp-tooltip.right {
+            right: 3rem;
+        }
+    }
+}

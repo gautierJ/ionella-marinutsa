@@ -14,12 +14,12 @@
 
 {% block main %}
     {% spaceless %}
-        {% if not isTouchDevice %}
+        {#{% if not isTouchDevice %}
             {% embed "ImhBaseBundle:Part:sidebar.html.twig" %}
                 {% block menu_gallery '' %}
                 {% block menu_social '' %}
             {% endembed %}
-        {% endif %}
+        {% endif %}#}
 
         {% include 'ImhBaseBundle:Components:link-next-slide.html.twig' %}
 
@@ -87,7 +87,7 @@
         $(function () {
             'use strict';
 
-            var assetUrl      = '{{ asset('bundles/imhbase/images/ionella_bw.jpg') }}',
+            var assetUrl      = '/bundles/imhbase/images/ionella_bw.jpg',
                 context       = $('[data-body]'),
                 menuMobile    = context.find('[data-menumobile]'),
                 nextSlideLink = $('[data-link-next-slide]'),
@@ -120,14 +120,14 @@
                 }
             };
 
-            var adjustBkgImg = function(image, imageCtn, imageCtnW, gap, imageRatio, windowH) {
+            /*var adjustBkgImg = function(image, imageCtn, imageCtnW, gap, imageRatio, windowH) {
                 image.width(imageCtnW + gap);
                 imageCtn.height((imageCtnW + gap) * imageRatio);
                 if(imageCtn.height() < windowH) {
                     imageCtn.height(windowH);
                     image.css('width', 'auto');
                 }
-            };
+            };*/
 
             $.ajax({
                 type: 'GET',
@@ -148,36 +148,31 @@
                 success: function() {
                     //if(fontLoaded) {
 
-                        //adjustBkgImg(image, imageCtn, imageCtnW, gap, imageRatio, windowH);
+                    //adjustBkgImg(image, imageCtn, imageCtnW, gap, imageRatio, windowH);
 
-                        context.addClass('mA_1');
+                    context.addClass('mA_1');
+                    document.addEventListener('DOMMouseScroll', handleScroll, false); // for Firefox
+                    document.addEventListener('mousewheel',     handleScroll, false); // for everyone else
 
-                        // detect available wheel event
-                        var support = "onwheel" in document.createElement("div") ? "wheel" : // Modern browsers support "wheel"
-                                document.onmousewheel !== undefined ? "mousewheel" : // Webkit and IE support at least "mousewheel"
-                                "DOMMouseScroll"; // let's assume that remaining browsers are older Firefox
+                    nextLink.on('click', function(e) {
+                        context.addClass('mA_2');
+                        loadFullPage();
+                        e.preventDefault();
 
-                        document.addEventListener(support, handleScroll, false);
+                        //if (e.originalEvent.animationName == 'stack-opening') {
+                        //}
+                    });
 
-                        nextLink.on('click', function(e) {
-                            context.addClass('mA_2');
-                            loadFullPage();
-                            e.preventDefault();
-
-                            //if (e.originalEvent.animationName == 'stack-opening') {
-                            //}
+                    if (Modernizr.touchevents) {
+                        context.one(animEnd, function(e) {
+                            console.log(e.originalEvent.animationName);
+                            if (e.originalEvent.animationName === 'stack-in-height') {
+                                $(this).delay(5000).addClass('mA_2');
+                                loadFullPage();
+                            }
                         });
-
-                        if (Modernizr.touchevents) {
-                            context.one(animEnd, function(e) {
-                                console.log(e.originalEvent.animationName);
-                                if (e.originalEvent.animationName === 'stack-in-height') {
-                                    $(this).delay(5000).addClass('mA_2');
-                                    loadFullPage();
-                                }
-                            });
-                        }
-                   // }
+                    }
+                    // }
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
                     console.log('Error : ' + errorThrown);
@@ -223,21 +218,24 @@
                     afterLoad: function(anchorLink, index) {
                         var loadedSection = $(this);
 
+                        console.log(index);
+
                         if (index === 1) {
                             $('[data-sidebar]').css('visibility', 'hidden'); //@TODO need improvement
-                            $('.fp-show-active').css('visibility', 'hidden'); //@TODO need improvement
+                            //$('.fp-show-active').css('visibility', 'hidden'); //@TODO need improvement
 
                             shutter.on(animEnd, function(e) {
                                 if (e.originalEvent.animationName !== 'stack-in-height') {
                                     context.addClass('mA_3');
                                     $.fn.fullpage.setAllowScrolling(true);
-                                    $video.get(0).play();
+
                                 }
                             });
+                            $video.get(0).play();
                         } else {
                             $video.get(0).pause();
                             $('[data-sidebar]').css('visibility', 'visible'); //@TODO need improvement
-                            $('.fp-show-active').css('visibility', 'visible'); //@TODO need improvement
+                            //$('.fp-show-active').css('visibility', 'visible'); //@TODO need improvement
                         }
 
                         if (index === 2) {
@@ -282,7 +280,7 @@
                 $video.get(0).pause(); /* [1] */
 
 
-                    screenfull.request($video.get(0));
+                screenfull.request($video.get(0));
 
             }, false);
 

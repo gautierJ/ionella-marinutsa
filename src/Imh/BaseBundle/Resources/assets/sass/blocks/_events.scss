@@ -2,12 +2,14 @@ $fa-font-path: "/bundles/imhbase/bower_components/fontawesome/fonts";
 
 @mixin aspect-ratio($width, $height) {
     position: relative;
+
     &:before {
         display: block;
         content: "";
         width: 100%;
         padding-top: ($height / $width) * 100%;
     }
+
     > .imh-block-events__figcaption {
         position: absolute;
         top: 0;
@@ -19,7 +21,7 @@ $fa-font-path: "/bundles/imhbase/bower_components/fontawesome/fonts";
 
 .imh-events {
     @include clearfix();
-    padding-top: 60px;
+    padding-top: 120px;
     height: 100%;
 }
 
@@ -185,6 +187,7 @@ $fa-font-path: "/bundles/imhbase/bower_components/fontawesome/fonts";
     position: absolute;
     bottom: 3em;
     right: 3em;
+    letter-spacing: 0.04em;
 }
 
 .imh-block-events__title {
@@ -257,8 +260,6 @@ $fa-font-path: "/bundles/imhbase/bower_components/fontawesome/fonts";
 // ==================================================
 
 @media (min-width: $screen-sm-min) {
-
-
 
     .imh-topcartridge__sub-title {
         font-size: $sixteenpx;
